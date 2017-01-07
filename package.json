@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "axios-mock-adapter": "^1.7.1",
     "parse-link-header": "^0.4.1",
     "react": "^15.4.2",
     "react-addons-create-fragment": "^15.4.2",

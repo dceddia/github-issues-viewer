@@ -33,28 +33,39 @@ describe('getIssues', () => {
     });
   });
 
-  it('parses response without a last page', (done) => {
+  it('returns correct pageCount on last page', (done) => {
     axios.get = url => {
       return Promise.resolve({
         data: 'the data',
         headers: {
-          link: "<https://api.github.com/repositories/8514/issues?per_page=25&page=2>; rel=\"next\""
+          link: '<https://api.github.com/repositories/8514/issues?per_page=25&page=1>; rel="first", <https://api.github.com/repositories/8514/issues?per_page=25&page=48>; rel="prev"'
         }
       });
     };
 
     getIssues('rails', 'rails').then(issues => {
-      expect(issues.data).toEqual('the data');
-      expect(issues.pageCount).toEqual(0);
-      expect(issues.pageLinks).toEqual({
-        "next": {
-          "page": "2",
-          "per_page": "25",
-          "rel": "next",
-          "url": "https://api.github.com/repositories/8514/issues?per_page=25&page=2",
-        }
-      });
-      done();
+      try {
+        expect(issues.data).toEqual('the data');
+        expect(issues.pageCount).toEqual(49);
+        expect(issues.pageLinks).toEqual({
+          "first": {
+            "page": "1",
+            "per_page": "25",
+            "rel": "first",
+            "url": "https://api.github.com/repositories/8514/issues?per_page=25&page=1",
+          },
+          "prev": {
+            "page": "48",
+            "per_page": "25",
+            "rel": "prev",
+            "url": "https://api.github.com/repositories/8514/issues?per_page=25&page=48",
+          }
+        });
+        done();
+      } catch(e) {
+        fail(e);
+        done();
+      }
     });
   });
 
