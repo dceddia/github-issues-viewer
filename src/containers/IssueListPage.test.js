@@ -1,11 +1,11 @@
 jest.mock('../api');
 
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { checkSnapshot } from '../testUtils';
 import * as API from '../api';
 import { afterPromises } from '../testUtils';
-import IssueListPage from './IssueListPage';
+import { IssueListPage } from './IssueListPage';
 import page1 from '../fixtures/issues/page1.json';
 
 // Jest doesn't handle \r\n in snapshots very well.
@@ -17,17 +17,47 @@ page1.data = page1.data.map(issue => ({
 }));
 
 beforeEach(() => {
-  API.getIssues.mockImplementation(() => Promise.resolve({
-    data: page1.data,
-    link: page1.link
-  }));
   API.getOpenIssueCount.mockImplementation(() => Promise.resolve(42));
 });
 
-it('renders', (done) => {
-  const tree = mount(
-    <IssueListPage org="rails" repo="rails"/>
+it('renders while loading', () => {
+  const tree = shallow(
+    <IssueListPage
+      org="rails"
+      repo="rails"
+      issues={[]}
+      isLoading={true}
+      totalIssueCount={null}
+      getIssues={jest.fn()}/>
   );
   checkSnapshot(tree);
-  afterPromises(done, () => checkSnapshot(tree));
+});
+
+it('renders with issues', () => {
+  const tree = shallow(
+    <IssueListPage
+      org="rails"
+      repo="rails"
+      issues={page1.data}
+      isLoading={false}
+      totalIssueCount={42}
+      getIssues={jest.fn()}/>
+  );
+  checkSnapshot(tree);
+});
+
+it('calls getIssues', () => {
+  let mockGetIssues = jest.fn();
+
+  const tree = mount(
+    <IssueListPage
+      org="rails"
+      repo="rails"
+      issues={[]}
+      isLoading={true}
+      totalIssueCount={null}
+      getIssues={mockGetIssues}/>
+  );
+
+  expect(mockGetIssues).toBeCalled();
 });

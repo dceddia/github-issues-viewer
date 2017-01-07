@@ -1,10 +1,12 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import IssueList from '../components/IssueList';
-import { getIssues, getOpenIssueCount } from '../api';
+import { getOpenIssueCount } from '../api';
+import { getIssues } from '../redux/actions';
 import Paginate from 'react-paginate';
 import './IssueListPage.css';
 
-class IssueListPage extends Component {
+export class IssueListPage extends Component {
   constructor(props) {
     super(props);
 
@@ -33,24 +35,7 @@ class IssueListPage extends Component {
 
   fetchIssues(page) {
     const {org, repo} = this.props;
-
-    getIssues(org, repo, page)
-      .then(issueResponse => {
-        this.setState({
-          pageCount: issueResponse.pageCount,
-          pageLinks: issueResponse.pageLinks,
-          issues: issueResponse.data,
-          loading: false
-        });
-      })
-      .catch(error => {
-        this.setState({
-          pageCount: 0,
-          pageLinks: {},
-          issues: [],
-          loading: false
-        });
-      });
+    this.props.getIssues(org, repo, page);
   }
 
   handlePageChange = ({ selected }) => {
@@ -58,8 +43,7 @@ class IssueListPage extends Component {
   }
 
   render() {
-    const {org, repo} = this.props;
-    const {openIssues, issues, loading, pageCount} = this.state;
+    const {org, repo, isLoading, issues, pageCount, totalIssueCount} = this.props;
     
     return (
       <div id="issue-list-page">
@@ -67,9 +51,9 @@ class IssueListPage extends Component {
           Open issues for <span>{org}</span> / <span>{repo}</span>
         </h1>
         <p>
-          {openIssues === null ? '--' : openIssues} open issues
+          {totalIssueCount === null ? '--' : totalIssueCount} open issues
         </p>
-        {loading
+        {isLoading
           ? <span>Loading...</span>
           : <IssueList issues={issues}/>
         }
@@ -95,4 +79,12 @@ IssueListPage.defaultProps = {
   repo: "rails"
 };
 
-export default IssueListPage;
+const mapStateToProps = ({ issues }) => ({
+  issues: issues.issues,
+  totalIssueCount: issues.totalIssueCount,
+  isLoading: issues.isLoading
+});
+
+const mapDispatch = { getIssues };
+
+export default connect(mapStateToProps, mapDispatch)(IssueListPage);
