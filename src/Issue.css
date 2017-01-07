@@ -1,0 +1,45 @@
+.issue {
+  border: 1px solid #ddd;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.issue__number {
+  font-size: 14px;
+  color: #999;
+  margin-right: 0.5rem;
+}
+
+.issue__title {
+  font-weight: bold;
+}
+
+.issue__summary {
+  
+}
+
+.issue__user {
+  text-align: center;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.issue__user__avatar {
+  width: 64px;
+  height: 64px;
+}
+
+.issue__user__name {
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.issue__label {
+  font-size: 0.9rem;
+  padding: 3px 5px;
+  margin-right: 3px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
