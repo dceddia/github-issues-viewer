@@ -1,0 +1,4 @@
+.issues__issue-wrapper:hover {
+  background-color: #eff9ff;
+  cursor: pointer;
+}

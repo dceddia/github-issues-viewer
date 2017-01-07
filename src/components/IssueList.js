@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Issue from './Issue';
+import './IssueList.css';
 
 function avatarForUser(user) {
   return user.avatar_url || user.gravatar_id;
@@ -9,7 +10,7 @@ export default function IssueList({ issues }) {
   return (
     <ul className="issues">
       {issues.map(issue =>
-        <li key={issue.id}>
+        <li key={issue.id} className="issues__issue-wrapper">
           <Issue
             number={issue.number}
             username={issue.user.login}
