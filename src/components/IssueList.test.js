@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
+import { checkSnapshot } from '../testUtils';
 import IssueList from './IssueList';
 
 let issues = [
@@ -312,5 +312,5 @@ it('renders', () => {
     <IssueList issues={issues}/>
   );
 
-  expect(toJson(tree)).toMatchSnapshot();
+  checkSnapshot(tree);
 });

@@ -2,7 +2,7 @@ jest.mock('../api');
 
 import React from 'react';
 import { mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
+import { checkSnapshot } from '../testUtils';
 import * as API from '../api';
 import { afterPromises } from '../testUtils';
 import IssueListPage from './IssueListPage';
@@ -28,9 +28,6 @@ it('renders', (done) => {
   const tree = mount(
     <IssueListPage org="rails" repo="rails"/>
   );
-  expect(toJson(tree)).toMatchSnapshot();
-
-  afterPromises(done, () => {
-    expect(toJson(tree)).toMatchSnapshot();
-  });
+  checkSnapshot(tree);
+  afterPromises(done, () => checkSnapshot(tree));
 });
