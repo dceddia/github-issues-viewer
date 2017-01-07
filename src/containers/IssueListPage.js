@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import IssueList from '../components/IssueList';
 import { getIssues, getOpenIssueCount } from '../api';
 import Paginate from 'react-paginate';
+import './IssueListPage.css';
 
 class IssueListPage extends Component {
   constructor(props) {
@@ -72,11 +73,13 @@ class IssueListPage extends Component {
           ? <span>Loading...</span>
           : <IssueList issues={issues}/>
         }
-        <Paginate
-          pageCount={pageCount}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={4}
-          onPageChange={this.handlePageChange} />
+        <div className="issues__pagination">
+          <Paginate
+            pageCount={pageCount}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={5}
+            onPageChange={this.handlePageChange} />
+        </div>
       </div>
     );
   }

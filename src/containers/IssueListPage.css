@@ -1,0 +1,39 @@
+#issue-list-page {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.issues__pagination {
+  padding: 1rem;
+  text-align: center;
+}
+
+.issues__pagination li {
+  display: inline-block;
+}
+.issues__pagination li > a {
+  padding: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.issues__pagination li > a:focus {
+  outline: none;
+}
+
+.issues__pagination li > a:hover {
+  background-color: #ccc;
+}
+
+.issues__pagination .selected a {
+  background-color: deepskyblue;
+}
+
+.issues__pagination .disabled > a {
+  color: #999;
+  cursor: default;
+}
+.issues__pagination .disabled > a:hover {
+  background-color: #eee;
+} 
