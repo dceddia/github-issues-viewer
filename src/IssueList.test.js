@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import renderer from 'react-test-renderer';
 import IssueList from './IssueList';
-import './App.css';
 
-const issues = [
+let issues = [
 {
     "url": "https://api.github.com/repos/rails/rails/issues/27599",
     "repository_url": "https://api.github.com/repos/rails/rails",
@@ -298,12 +298,18 @@ const issues = [
   }
 ];
 
-class App extends Component {
-  render() {
-    return (
-      <IssueList issues={issues}/>
-    );
-  }
-}
+// Jest doesn't handle \r\n in snapshots very well.
+// https://github.com/facebook/jest/pull/1879#issuecomment-261019033
+// Replace the body with some plain text
+issues = issues.map(issue => ({
+  ...issue,
+  body: "something with no line breaks"
+}));
 
-export default App;
+it('renders', () => {
+  const tree = renderer.create(
+    <IssueList issues={issues}/>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});

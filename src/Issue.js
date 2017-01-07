@@ -3,7 +3,7 @@ import './Issue.css';
 
 function shorten(text = "", length = 140) {
   // Normalize newlines
-  let cleanText = text.replace(/\\r\\n/g, "\\n");
+  let cleanText = text.replace(/\\r\\n/g, "\n");
 
   // Return if short enough already
   if(cleanText.length <= length) {
@@ -28,8 +28,11 @@ export default function Issue({ number, title, labels, username, avatarUrl, summ
         <p className="issue__summary">{shorten(summary)}</p>
         <div className="issue__labels">
           {labels.map(label =>
-            <span className="issue__label" key={label}>
-              {label}
+            <span
+              key={label.id}
+              className="issue__label"
+              style={{borderColor: `#${label.color}`}}>
+              {label.name}
             </span>
           )}
         </div>
@@ -41,7 +44,11 @@ export default function Issue({ number, title, labels, username, avatarUrl, summ
 Issue.propTypes = {
   number: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  labels: PropTypes.arrayOf(PropTypes.string).isRequired,
+  labels: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    color: PropTypes.string
+  })).isRequired,
   username: PropTypes.string.isRequired,
   avatarUrl: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired

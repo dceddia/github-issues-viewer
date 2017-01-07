@@ -1,5 +1,5 @@
 .issue {
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   display: flex;
   padding: 0.5rem;
 }
@@ -14,16 +14,14 @@
   font-weight: bold;
 }
 
-.issue__summary {
-  
-}
-
 .issue__user {
   text-align: center;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  min-width: 80px;
 }
 
 .issue__user__avatar {

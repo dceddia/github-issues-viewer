@@ -26,16 +26,19 @@ exports[`test renders 1`] = `
     </div>
     <p
       className="issue__summary">
-      Fixes #23979.\\n\\nAs discussed in #23979, there was an inconsistency between the way that \`first()\` and \`last()\` would interact with \`limit\`.
+      Fixes #23979.
+      
+      As discussed in #23979, there was an inconsistency between the way that \`first()\` and \`last()\` would interact with \`limit\`. S
     </p>
     <div
       className="issue__labels">
       <span
-        className="issue__label">
-        actionview
-      </span>
-      <span
-        className="issue__label">
+        className="issue__label"
+        style={
+          Object {
+            "borderColor": "#123456",
+          }
+        }>
         activerecord
       </span>
     </div>
