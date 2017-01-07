@@ -90,4 +90,9 @@ IssueListPage.propTypes = {
   repo: PropTypes.string.isRequired
 };
 
+IssueListPage.defaultProps = {
+  org: "rails",
+  repo: "rails"
+};
+
 export default IssueListPage;
