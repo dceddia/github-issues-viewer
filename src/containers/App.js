@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import IssueList from './IssueList';
+import IssueList from '../components/IssueList';
 import './App.css';
 
 const issues = [
