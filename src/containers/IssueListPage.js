@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import IssueList from '../components/IssueList';
-import { getOpenIssueCount } from '../api';
-import { getIssues } from '../redux/actions';
+import { getIssues, getRepoDetails } from '../redux/actions';
 import Paginate from 'react-paginate';
 import './IssueListPage.css';
 
@@ -13,37 +12,25 @@ export class IssueListPage extends Component {
     this.state = {
       loading: true,
       issues: [],
-      openIssues: null,
       pageLinks: {}
     };
   }
 
   componentDidMount() {
-    const {org, repo} = this.props;
+    const {getIssues, getRepoDetails, org, repo} = this.props;
     
-    // Fetch the number of open issues
-    getOpenIssueCount(org, repo)
-      .then(openIssues => {
-        this.setState({ openIssues });
-      })
-      .catch(error => {
-        this.setState({ openIssues: null });
-      });
-
-    this.fetchIssues(1);
-  }
-
-  fetchIssues(page) {
-    const {org, repo} = this.props;
-    this.props.getIssues(org, repo, page);
+    getRepoDetails(org, repo);
+    getIssues(org, repo, 1);
   }
 
   handlePageChange = ({ selected }) => {
-    this.fetchIssues(selected + 1);
+    const {getIssues, org, repo} = this.props;
+
+    getIssues(org, repo, selected + 1);
   }
 
   render() {
-    const {org, repo, isLoading, issues, pageCount, totalIssueCount} = this.props;
+    const {org, repo, isLoading, issues, pageCount, openIssuesCount} = this.props;
     
     return (
       <div id="issue-list-page">
@@ -51,7 +38,7 @@ export class IssueListPage extends Component {
           Open issues for <span>{org}</span> / <span>{repo}</span>
         </h1>
         <p>
-          {totalIssueCount === null ? '--' : totalIssueCount} open issues
+          {openIssuesCount === -1 ? '--' : openIssuesCount} open issues
         </p>
         {isLoading
           ? <span>Loading...</span>
@@ -71,7 +58,10 @@ export class IssueListPage extends Component {
 
 IssueListPage.propTypes = {
   org: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired
+  repo: PropTypes.string.isRequired,
+  issues: PropTypes.array.isRequired,
+  openIssuesCount: PropTypes.number.isRequired,
+  isLoading: PropTypes.bool.isRequired
 };
 
 IssueListPage.defaultProps = {
@@ -79,12 +69,12 @@ IssueListPage.defaultProps = {
   repo: "rails"
 };
 
-const mapStateToProps = ({ issues }) => ({
+const mapStateToProps = ({ issues, repo }) => ({
   issues: issues.issues,
-  totalIssueCount: issues.totalIssueCount,
-  isLoading: issues.isLoading
+  openIssuesCount: repo.openIssuesCount,
+  isLoading: issues.isLoading,
 });
 
-const mapDispatch = { getIssues };
+const mapDispatch = { getIssues, getRepoDetails };
 
 export default connect(mapStateToProps, mapDispatch)(IssueListPage);

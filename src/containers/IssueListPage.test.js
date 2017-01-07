@@ -16,10 +16,6 @@ page1.data = page1.data.map(issue => ({
   body: 'something without newlines'
 }));
 
-beforeEach(() => {
-  API.getOpenIssueCount.mockImplementation(() => Promise.resolve(42));
-});
-
 it('renders while loading', () => {
   const tree = shallow(
     <IssueListPage
@@ -27,7 +23,7 @@ it('renders while loading', () => {
       repo="rails"
       issues={[]}
       isLoading={true}
-      totalIssueCount={null}
+      openIssuesCount={-1}
       getIssues={jest.fn()}/>
   );
   checkSnapshot(tree);
@@ -40,14 +36,15 @@ it('renders with issues', () => {
       repo="rails"
       issues={page1.data}
       isLoading={false}
-      totalIssueCount={42}
+      openIssuesCount={42}
       getIssues={jest.fn()}/>
   );
   checkSnapshot(tree);
 });
 
-it('calls getIssues', () => {
+it('calls getIssues and getRepoDetails', () => {
   let mockGetIssues = jest.fn();
+  let mockGetRepoDetails = jest.fn();
 
   const tree = mount(
     <IssueListPage
@@ -55,9 +52,11 @@ it('calls getIssues', () => {
       repo="rails"
       issues={[]}
       isLoading={true}
-      totalIssueCount={null}
-      getIssues={mockGetIssues}/>
+      openIssuesCount={-1}
+      getIssues={mockGetIssues}
+      getRepoDetails={mockGetRepoDetails}/>
   );
 
   expect(mockGetIssues).toBeCalled();
+  expect(mockGetRepoDetails).toBeCalled();
 });

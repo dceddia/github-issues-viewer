@@ -54,11 +54,11 @@ export function getIssues(org, repo, page = 1) {
     });
 }
 
-export function getOpenIssueCount(org, repo) {
+export function getRepoDetails(org, repo) {
   const url = `https://api.github.com/repos/${org}/${repo}`;
   return axios.get(url)
     .then(res => {
-      return res.data.open_issues_count;
+      return res.data;
     })
     .catch(err => {
       return Promise.reject(-1);

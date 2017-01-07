@@ -1,4 +1,4 @@
-import { getIssues, getOpenIssueCount } from './index';
+import { getIssues, getRepoDetails } from './index';
 import axios from 'axios';
 
 describe('getIssues', () => {
@@ -88,7 +88,7 @@ describe('getIssues', () => {
   });
 });
 
-describe('getOpenIssueCount', () => {
+describe('getRepoDetails', () => {
   it('handles successful responses', (done) => {
     axios.get = url => {
       return Promise.resolve({
@@ -98,8 +98,8 @@ describe('getOpenIssueCount', () => {
       });
     };
 
-    getOpenIssueCount('rails', 'rails').then(count => {
-      expect(count).toEqual(42);
+    getRepoDetails('rails', 'rails').then(count => {
+      expect(count).toEqual({open_issues_count: 42});
       done();
     });
   });
@@ -109,7 +109,7 @@ describe('getOpenIssueCount', () => {
       return Promise.reject('terrible error');
     };
 
-    getOpenIssueCount('rails', 'rails')
+    getRepoDetails('rails', 'rails')
       .then(fail)
       .catch(count => {
         expect(count).toEqual(-1);
