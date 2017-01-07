@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import IssueList from '../components/IssueList';
 import { getIssues, getOpenIssueCount } from '../api';
+import Paginate from 'react-paginate';
 
 class IssueListPage extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class IssueListPage extends Component {
       loading: true,
       issues: [],
       openIssues: -1,
-      pages: {}
+      pageLinks: {}
     };
   }
 
@@ -18,23 +19,46 @@ class IssueListPage extends Component {
     const {org, repo} = this.props;
     
     // Fetch the number of open issues
-    getOpenIssueCount(org, repo).then(openIssues => {
-      this.setState({ openIssues });
-    });
-
-    // Fetch the issues from page 1
-    getIssues(org, repo, 1).then(issueResponse => {
-      this.setState({
-        pages: issueResponse.pages,
-        issues: issueResponse.data,
-        loading: false
+    getOpenIssueCount(org, repo)
+      .then(openIssues => {
+        this.setState({ openIssues });
+      })
+      .catch(error => {
+        this.setState({ openIssues: -1 });
       });
-    });
+
+    this.fetchIssues(1);
+  }
+
+  fetchIssues(page) {
+    const {org, repo} = this.props;
+
+    getIssues(org, repo, page)
+      .then(issueResponse => {
+        this.setState({
+          pageCount: issueResponse.pageCount,
+          pageLinks: issueResponse.pageLinks,
+          issues: issueResponse.data,
+          loading: false
+        });
+      })
+      .catch(error => {
+        this.setState({
+          pageCount: 0,
+          pageLinks: {},
+          issues: [],
+          loading: false
+        });
+      });
+  }
+
+  handlePageChange = ({ selected }) => {
+    this.fetchIssues(selected + 1);
   }
 
   render() {
     const {org, repo} = this.props;
-    const {openIssues, issues, loading} = this.state;
+    const {openIssues, issues, loading, pageCount} = this.state;
     
     return (
       <div id="issue-list-page">
@@ -48,6 +72,11 @@ class IssueListPage extends Component {
           ? <span>Loading...</span>
           : <IssueList issues={issues}/>
         }
+        <Paginate
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={4}
+          onPageChange={this.handlePageChange} />
       </div>
     );
   }

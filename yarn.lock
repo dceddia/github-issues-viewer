@@ -1163,6 +1163,10 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
+classnames@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 clean-css@3.4.x:
   version "3.4.23"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-3.4.23.tgz#604fbbca24c12feb59b02f00b84f1fb7ded6d001"
@@ -4392,6 +4396,13 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
+react-addons-create-fragment@^15.4.2:
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.4.2.tgz#11372924f730a97dff4c690535211bb73d8f8815"
+  dependencies:
+    fbjs "^0.8.4"
+    object-assign "^4.1.0"
+
 react-addons-test-utils@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.4.2.tgz#93bcaa718fcae7360d42e8fb1c09756cc36302a2"
@@ -4418,6 +4429,12 @@ react-dom@^15.4.2:
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react-paginate@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-paginate/-/react-paginate-4.1.0.tgz#1a3379f1a029874fc9bf173438fd621f83648940"
+  dependencies:
+    classnames "^2.2.5"
 
 react-scripts@0.8.4:
   version "0.8.4"
