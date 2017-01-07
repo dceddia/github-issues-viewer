@@ -2,3 +2,8 @@
   background-color: #eff9ff;
   cursor: pointer;
 }
+
+.issues__issue-link {
+  text-decoration: none;
+  color: unset;
+}
