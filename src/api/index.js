@@ -6,16 +6,29 @@ import page2 from '../fixtures/issues/page2';
 import page3 from '../fixtures/issues/page3';
 import page49 from '../fixtures/issues/page49';
 
-let mock = new MockAxios(axios);
+const USE_STATIC_DATA = true;
 
-mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=1')
-  .reply(200, page1.data, {link: page1.link});
-mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=2')
-  .reply(200, page2.data, {link: page2.link});
-mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=3')
-  .reply(200, page3.data, {link: page3.link});
-mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=49')
-  .reply(200, page49.data, {link: page49.link});
+if(USE_STATIC_DATA) {
+  let mock = new MockAxios(axios);
+
+  mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=1')
+    .reply(200, page1.data, {link: page1.link});
+  mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=2')
+    .reply(200, page2.data, {link: page2.link});
+  mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=3')
+    .reply(200, page3.data, {link: page3.link});
+  mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=49')
+    .reply(200, page49.data, {link: page49.link});
+  mock.onGet(/issues\/\d+/)
+    .reply(config => {
+      const number = config.url.match(/issues\/(\d+)/)[1];
+      const issue = {
+        ...page1.data[0],
+        number
+      };
+      return [200, issue];
+    });
+}
 
 const isLastPage = (pageLinks) => {
   return Object.keys(pageLinks).length === 2 &&
@@ -57,10 +70,13 @@ export function getIssues(org, repo, page = 1) {
 export function getRepoDetails(org, repo) {
   const url = `https://api.github.com/repos/${org}/${repo}`;
   return axios.get(url)
-    .then(res => {
-      return res.data;
-    })
-    .catch(err => {
-      return Promise.reject(-1);
-    });
+    .then(res => res.data)
+    .catch(err => Promise.reject(-1));
+}
+
+export function getIssue(org, repo, number) {
+  const url = `https://api.github.com/repos/${org}/${repo}/issues/${number}`;
+  return axios.get(url)
+    .then(res => res.data)
+    .catch(err => Promise.reject({}));
 }

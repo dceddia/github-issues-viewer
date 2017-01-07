@@ -1,5 +1,8 @@
 import * as API from '../api';
 
+export const GET_ISSUE_BEGIN = 'GET_ISSUE_BEGIN';
+export const GET_ISSUE_SUCCESS = 'GET_ISSUE_SUCCESS';
+export const GET_ISSUE_FAILURE = 'GET_ISSUE_FAILURE';
 export const GET_ISSUES_BEGIN = 'GET_ISSUES_BEGIN';
 export const GET_ISSUES_SUCCESS = 'GET_ISSUES_SUCCESS';
 export const GET_ISSUES_FAILURE = 'GET_ISSUES_FAILURE';
@@ -56,4 +59,28 @@ export function getRepoDetails(org, repo) {
       .then(details => dispatch(getRepoDetailsSuccess(details)))
       .catch(error => dispatch(getRepoDetailsFailure(error)));
   } 
+}
+
+
+export function getIssueSuccess(issue) {
+  return {
+    type: GET_ISSUE_SUCCESS,
+    payload: issue
+  };
+}
+
+export function getIssueFailure(error) {
+  return {
+    type: GET_ISSUE_FAILURE,
+    error
+  };
+}
+
+export function getIssue(org, repo, number) {
+  return dispatch => {
+    dispatch({type: GET_ISSUE_BEGIN});
+    API.getIssue(org, repo, number)
+      .then(res => dispatch(getIssueSuccess(res)))
+      .catch(error => dispatch(getIssueFailure(error)));
+  };
 }

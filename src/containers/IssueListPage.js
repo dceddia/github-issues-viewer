@@ -69,8 +69,11 @@ IssueListPage.defaultProps = {
   repo: "rails"
 };
 
+const selectIssues = issues => 
+  issues.currentPageIssues.map(number => issues.issuesByNumber[number]);
+
 const mapStateToProps = ({ issues, repo }) => ({
-  issues: issues.issues,
+  issues: selectIssues(issues),
   openIssuesCount: repo.openIssuesCount,
   isLoading: issues.isLoading,
 });
