@@ -11,7 +11,7 @@ class IssueListPage extends Component {
     this.state = {
       loading: true,
       issues: [],
-      openIssues: -1,
+      openIssues: null,
       pageLinks: {}
     };
   }
@@ -25,7 +25,7 @@ class IssueListPage extends Component {
         this.setState({ openIssues });
       })
       .catch(error => {
-        this.setState({ openIssues: -1 });
+        this.setState({ openIssues: null });
       });
 
     this.fetchIssues(1);
@@ -67,7 +67,7 @@ class IssueListPage extends Component {
           Open issues for <span>{org}</span> / <span>{repo}</span>
         </h1>
         <p>
-          {openIssues > -1 ? openIssues : '--'} open issues
+          {openIssues === null ? '--' : openIssues} open issues
         </p>
         {loading
           ? <span>Loading...</span>
