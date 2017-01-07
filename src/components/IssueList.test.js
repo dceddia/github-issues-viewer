@@ -1,5 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import IssueList from './IssueList';
 
 let issues = [
@@ -307,9 +308,9 @@ issues = issues.map(issue => ({
 }));
 
 it('renders', () => {
-  const tree = renderer.create(
+  const tree = shallow(
     <IssueList issues={issues}/>
-  ).toJSON();
+  );
 
-  expect(tree).toMatchSnapshot();
+  expect(toJson(tree)).toMatchSnapshot();
 });

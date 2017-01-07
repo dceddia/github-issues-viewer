@@ -2,157 +2,75 @@ exports[`test renders 1`] = `
 <ul
   className="issues">
   <li>
-    <div
-      className="issue">
-      <div
-        className="issue__user">
-        <img
-          alt=""
-          className="issue__user__avatar"
-          src="https://avatars.githubusercontent.com/u/314014?v=3" />
-        <div
-          className="issue__user__name">
-          NickLaMuro
-        </div>
-      </div>
-      <div>
-        <div>
-          <span
-            className="issue__number">
-            #
-            27599
-          </span>
-          <span
-            className="issue__title">
-            Fix bug with symbolized keys in .where with nested join (alternative to #27598)
-          </span>
-        </div>
-        <p
-          className="issue__summary">
-          something with no line breaks
-        </p>
-        <div
-          className="issue__labels">
-          <span
-            className="issue__label"
-            style={
-              Object {
-                "borderColor": "#0b02e1",
-              }
-            }>
-            activerecord
-          </span>
-          <span
-            className="issue__label"
-            style={
-              Object {
-                "borderColor": "#ededed",
-              }
-            }>
-            needs feedback
-          </span>
-        </div>
-      </div>
-    </div>
+    <Issue
+      avatarUrl="https://avatars.githubusercontent.com/u/314014?v=3"
+      labels={
+        Array [
+          Object {
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      }
+      number={27599}
+      summary="something with no line breaks"
+      title="Fix bug with symbolized keys in .where with nested join (alternative to #27598)"
+      username="NickLaMuro" />
   </li>
   <li>
-    <div
-      className="issue">
-      <div
-        className="issue__user">
-        <img
-          alt=""
-          className="issue__user__avatar"
-          src="https://avatars.githubusercontent.com/u/314014?v=3" />
-        <div
-          className="issue__user__name">
-          NickLaMuro
-        </div>
-      </div>
-      <div>
-        <div>
-          <span
-            className="issue__number">
-            #
-            27598
-          </span>
-          <span
-            className="issue__title">
-            Fix bug with symbolized keys in .where with nested join
-          </span>
-        </div>
-        <p
-          className="issue__summary">
-          something with no line breaks
-        </p>
-        <div
-          className="issue__labels">
-          <span
-            className="issue__label"
-            style={
-              Object {
-                "borderColor": "#0b02e1",
-              }
-            }>
-            activerecord
-          </span>
-          <span
-            className="issue__label"
-            style={
-              Object {
-                "borderColor": "#ededed",
-              }
-            }>
-            needs feedback
-          </span>
-        </div>
-      </div>
-    </div>
+    <Issue
+      avatarUrl="https://avatars.githubusercontent.com/u/314014?v=3"
+      labels={
+        Array [
+          Object {
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      }
+      number={27598}
+      summary="something with no line breaks"
+      title="Fix bug with symbolized keys in .where with nested join"
+      username="NickLaMuro" />
   </li>
   <li>
-    <div
-      className="issue">
-      <div
-        className="issue__user">
-        <img
-          alt=""
-          className="issue__user__avatar"
-          src="https://avatars.githubusercontent.com/u/2460418?v=3" />
-        <div
-          className="issue__user__name">
-          brchristian
-        </div>
-      </div>
-      <div>
-        <div>
-          <span
-            className="issue__number">
-            #
-            27597
-          </span>
-          <span
-            className="issue__title">
-            Consistency between first() and last() with limit
-          </span>
-        </div>
-        <p
-          className="issue__summary">
-          something with no line breaks
-        </p>
-        <div
-          className="issue__labels">
-          <span
-            className="issue__label"
-            style={
-              Object {
-                "borderColor": "#0b02e1",
-              }
-            }>
-            activerecord
-          </span>
-        </div>
-      </div>
-    </div>
+    <Issue
+      avatarUrl="https://avatars.githubusercontent.com/u/2460418?v=3"
+      labels={
+        Array [
+          Object {
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+        ]
+      }
+      number={27597}
+      summary="something with no line breaks"
+      title="Consistency between first() and last() with limit"
+      username="brchristian" />
   </li>
 </ul>
 `;

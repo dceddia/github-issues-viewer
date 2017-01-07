@@ -1,0 +1,3933 @@
+exports[`test renders 1`] = `
+<IssueListPage
+  org="rails"
+  repo="rails">
+  <div
+    id="issue-list-page">
+    <h1>
+      Open issues for 
+      <span>
+        rails
+      </span>
+       / 
+      <span>
+        rails
+      </span>
+    </h1>
+    <p>
+      --
+       open issues
+    </p>
+    <span>
+      Loading...
+    </span>
+  </div>
+</IssueListPage>
+`;
+
+exports[`test renders 2`] = `
+<IssueListPage
+  org="rails"
+  repo="rails">
+  <div
+    id="issue-list-page">
+    <h1>
+      Open issues for 
+      <span>
+        rails
+      </span>
+       / 
+      <span>
+        rails
+      </span>
+    </h1>
+    <p>
+      42
+       open issues
+    </p>
+    <IssueList
+      issues={
+        Array [
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 3,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27598/comments",
+            "created_at": "2017-01-07T01:00:48Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27598/events",
+            "html_url": "https://github.com/rails/rails/pull/27598",
+            "id": 199327680,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27598/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27598,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27598.diff",
+              "html_url": "https://github.com/rails/rails/pull/27598",
+              "patch_url": "https://github.com/rails/rails/pull/27598.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27598",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join",
+            "updated_at": "2017-01-07T01:15:33Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27598",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/6321?v=3",
+              "events_url": "https://api.github.com/users/pixeltrix/events{/privacy}",
+              "followers_url": "https://api.github.com/users/pixeltrix/followers",
+              "following_url": "https://api.github.com/users/pixeltrix/following{/other_user}",
+              "gists_url": "https://api.github.com/users/pixeltrix/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/pixeltrix",
+              "id": 6321,
+              "login": "pixeltrix",
+              "organizations_url": "https://api.github.com/users/pixeltrix/orgs",
+              "received_events_url": "https://api.github.com/users/pixeltrix/received_events",
+              "repos_url": "https://api.github.com/users/pixeltrix/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/pixeltrix/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/pixeltrix/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/pixeltrix",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/6321?v=3",
+                "events_url": "https://api.github.com/users/pixeltrix/events{/privacy}",
+                "followers_url": "https://api.github.com/users/pixeltrix/followers",
+                "following_url": "https://api.github.com/users/pixeltrix/following{/other_user}",
+                "gists_url": "https://api.github.com/users/pixeltrix/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/pixeltrix",
+                "id": 6321,
+                "login": "pixeltrix",
+                "organizations_url": "https://api.github.com/users/pixeltrix/orgs",
+                "received_events_url": "https://api.github.com/users/pixeltrix/received_events",
+                "repos_url": "https://api.github.com/users/pixeltrix/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/pixeltrix/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/pixeltrix/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/pixeltrix",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 1,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27597/comments",
+            "created_at": "2017-01-06T22:34:28Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27597/events",
+            "html_url": "https://github.com/rails/rails/pull/27597",
+            "id": 199307639,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27597/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27597,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27597.diff",
+              "html_url": "https://github.com/rails/rails/pull/27597",
+              "patch_url": "https://github.com/rails/rails/pull/27597.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27597",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Consistency between first() and last() with limit",
+            "updated_at": "2017-01-06T22:46:24Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27597",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/2460418?v=3",
+              "events_url": "https://api.github.com/users/brchristian/events{/privacy}",
+              "followers_url": "https://api.github.com/users/brchristian/followers",
+              "following_url": "https://api.github.com/users/brchristian/following{/other_user}",
+              "gists_url": "https://api.github.com/users/brchristian/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/brchristian",
+              "id": 2460418,
+              "login": "brchristian",
+              "organizations_url": "https://api.github.com/users/brchristian/orgs",
+              "received_events_url": "https://api.github.com/users/brchristian/received_events",
+              "repos_url": "https://api.github.com/users/brchristian/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/brchristian/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/brchristian/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/brchristian",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 9,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27595/comments",
+            "created_at": "2017-01-06T18:57:48Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27595/events",
+            "html_url": "https://github.com/rails/rails/issues/27595",
+            "id": 199262959,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+              Object {
+                "color": "e10c02",
+                "default": false,
+                "id": 107186,
+                "name": "regression",
+                "url": "https://api.github.com/repos/rails/rails/labels/regression",
+              },
+              Object {
+                "color": "009800",
+                "default": false,
+                "id": 126910270,
+                "name": "With reproduction steps",
+                "url": "https://api.github.com/repos/rails/rails/labels/With%20reproduction%20steps",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27595/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27595,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "has_many :through with \`include Comparable\`",
+            "updated_at": "2017-01-06T22:59:05Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27595",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/70484?v=3",
+              "events_url": "https://api.github.com/users/jnimety/events{/privacy}",
+              "followers_url": "https://api.github.com/users/jnimety/followers",
+              "following_url": "https://api.github.com/users/jnimety/following{/other_user}",
+              "gists_url": "https://api.github.com/users/jnimety/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/jnimety",
+              "id": 70484,
+              "login": "jnimety",
+              "organizations_url": "https://api.github.com/users/jnimety/orgs",
+              "received_events_url": "https://api.github.com/users/jnimety/received_events",
+              "repos_url": "https://api.github.com/users/jnimety/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/jnimety/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/jnimety/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/jnimety",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+              "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+              "followers_url": "https://api.github.com/users/matthewd/followers",
+              "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+              "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/matthewd",
+              "id": 1034,
+              "login": "matthewd",
+              "organizations_url": "https://api.github.com/users/matthewd/orgs",
+              "received_events_url": "https://api.github.com/users/matthewd/received_events",
+              "repos_url": "https://api.github.com/users/matthewd/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/matthewd",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+                "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+                "followers_url": "https://api.github.com/users/matthewd/followers",
+                "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+                "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/matthewd",
+                "id": 1034,
+                "login": "matthewd",
+                "organizations_url": "https://api.github.com/users/matthewd/orgs",
+                "received_events_url": "https://api.github.com/users/matthewd/received_events",
+                "repos_url": "https://api.github.com/users/matthewd/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/matthewd",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 3,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27594/comments",
+            "created_at": "2017-01-06T17:03:41Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27594/events",
+            "html_url": "https://github.com/rails/rails/pull/27594",
+            "id": 199240846,
+            "labels": Array [],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27594/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27594,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27594.diff",
+              "html_url": "https://github.com/rails/rails/pull/27594",
+              "patch_url": "https://github.com/rails/rails/pull/27594.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27594",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "clarifies usage of blocks when fetching from cache",
+            "updated_at": "2017-01-06T17:06:53Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27594",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/301424?v=3",
+              "events_url": "https://api.github.com/users/manvsmachine/events{/privacy}",
+              "followers_url": "https://api.github.com/users/manvsmachine/followers",
+              "following_url": "https://api.github.com/users/manvsmachine/following{/other_user}",
+              "gists_url": "https://api.github.com/users/manvsmachine/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/manvsmachine",
+              "id": 301424,
+              "login": "manvsmachine",
+              "organizations_url": "https://api.github.com/users/manvsmachine/orgs",
+              "received_events_url": "https://api.github.com/users/manvsmachine/received_events",
+              "repos_url": "https://api.github.com/users/manvsmachine/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/manvsmachine/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/manvsmachine/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/manvsmachine",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 0,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27593/comments",
+            "created_at": "2017-01-06T16:19:23Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27593/events",
+            "html_url": "https://github.com/rails/rails/issues/27593",
+            "id": 199230854,
+            "labels": Array [
+              Object {
+                "color": "d7e102",
+                "default": false,
+                "id": 3666649,
+                "name": "actionview",
+                "url": "https://api.github.com/repos/rails/rails/labels/actionview",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27593/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27593,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Yield in partial view does not call block given by calling view",
+            "updated_at": "2017-01-06T22:44:45Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27593",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/4522528?v=3",
+              "events_url": "https://api.github.com/users/carrieje/events{/privacy}",
+              "followers_url": "https://api.github.com/users/carrieje/followers",
+              "following_url": "https://api.github.com/users/carrieje/following{/other_user}",
+              "gists_url": "https://api.github.com/users/carrieje/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/carrieje",
+              "id": 4522528,
+              "login": "carrieje",
+              "organizations_url": "https://api.github.com/users/carrieje/orgs",
+              "received_events_url": "https://api.github.com/users/carrieje/received_events",
+              "repos_url": "https://api.github.com/users/carrieje/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/carrieje/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/carrieje/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/carrieje",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 0,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27591/comments",
+            "created_at": "2017-01-06T13:10:37Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27591/events",
+            "html_url": "https://github.com/rails/rails/issues/27591",
+            "id": 199193609,
+            "labels": Array [
+              Object {
+                "color": "8BE06E",
+                "default": false,
+                "id": 107195,
+                "name": "railties",
+                "url": "https://api.github.com/repos/rails/rails/labels/railties",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27591/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27591,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Rails 5 scaffold_controller generates html files when --api flag is used",
+            "updated_at": "2017-01-06T22:48:16Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27591",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/615?v=3",
+              "events_url": "https://api.github.com/users/codehugger/events{/privacy}",
+              "followers_url": "https://api.github.com/users/codehugger/followers",
+              "following_url": "https://api.github.com/users/codehugger/following{/other_user}",
+              "gists_url": "https://api.github.com/users/codehugger/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/codehugger",
+              "id": 615,
+              "login": "codehugger",
+              "organizations_url": "https://api.github.com/users/codehugger/orgs",
+              "received_events_url": "https://api.github.com/users/codehugger/received_events",
+              "repos_url": "https://api.github.com/users/codehugger/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/codehugger/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/codehugger/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/codehugger",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 1,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27589/comments",
+            "created_at": "2017-01-06T12:37:50Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27589/events",
+            "html_url": "https://github.com/rails/rails/pull/27589",
+            "id": 199188105,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27589/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27589,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27589.diff",
+              "html_url": "https://github.com/rails/rails/pull/27589",
+              "patch_url": "https://github.com/rails/rails/pull/27589.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27589",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Reduce \`serialize\` in \`changed_in_place?\`",
+            "updated_at": "2017-01-06T22:47:32Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27589",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/12642?v=3",
+              "events_url": "https://api.github.com/users/kamipo/events{/privacy}",
+              "followers_url": "https://api.github.com/users/kamipo/followers",
+              "following_url": "https://api.github.com/users/kamipo/following{/other_user}",
+              "gists_url": "https://api.github.com/users/kamipo/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/kamipo",
+              "id": 12642,
+              "login": "kamipo",
+              "organizations_url": "https://api.github.com/users/kamipo/orgs",
+              "received_events_url": "https://api.github.com/users/kamipo/received_events",
+              "repos_url": "https://api.github.com/users/kamipo/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/kamipo/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/kamipo/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/kamipo",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 5,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27588/comments",
+            "created_at": "2017-01-06T10:19:23Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27588/events",
+            "html_url": "https://github.com/rails/rails/pull/27588",
+            "id": 199165913,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "fbca04",
+                "default": false,
+                "id": 70310659,
+                "name": "PostgreSQL",
+                "url": "https://api.github.com/repos/rails/rails/labels/PostgreSQL",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27588/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27588,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27588.diff",
+              "html_url": "https://github.com/rails/rails/pull/27588",
+              "patch_url": "https://github.com/rails/rails/pull/27588.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27588",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "PostgreSQL JSONB columns do not preserve the key order of hashes",
+            "updated_at": "2017-01-07T01:44:40Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27588",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/167215?v=3",
+              "events_url": "https://api.github.com/users/bradleypriest/events{/privacy}",
+              "followers_url": "https://api.github.com/users/bradleypriest/followers",
+              "following_url": "https://api.github.com/users/bradleypriest/following{/other_user}",
+              "gists_url": "https://api.github.com/users/bradleypriest/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/bradleypriest",
+              "id": 167215,
+              "login": "bradleypriest",
+              "organizations_url": "https://api.github.com/users/bradleypriest/orgs",
+              "received_events_url": "https://api.github.com/users/bradleypriest/received_events",
+              "repos_url": "https://api.github.com/users/bradleypriest/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/bradleypriest/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/bradleypriest/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/bradleypriest",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 0,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27587/comments",
+            "created_at": "2017-01-06T09:48:30Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27587/events",
+            "html_url": "https://github.com/rails/rails/pull/27587",
+            "id": 199160022,
+            "labels": Array [
+              Object {
+                "color": "FFF700",
+                "default": false,
+                "id": 107189,
+                "name": "actionpack",
+                "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27587/labels{/name}",
+            "locked": false,
+            "milestone": Object {
+              "closed_at": null,
+              "closed_issues": 24,
+              "created_at": "2016-02-24T03:19:34Z",
+              "creator": Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+                "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+                "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+                "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+                "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/rafaelfranca",
+                "id": 47848,
+                "login": "rafaelfranca",
+                "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+                "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+                "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/rafaelfranca",
+              },
+              "description": "",
+              "due_on": null,
+              "html_url": "https://github.com/rails/rails/milestone/49",
+              "id": 1601639,
+              "labels_url": "https://api.github.com/repos/rails/rails/milestones/49/labels",
+              "number": 49,
+              "open_issues": 16,
+              "state": "open",
+              "title": "5.1.0",
+              "updated_at": "2017-01-06T09:48:36Z",
+              "url": "https://api.github.com/repos/rails/rails/milestones/49",
+            },
+            "number": 27587,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27587.diff",
+              "html_url": "https://github.com/rails/rails/pull/27587",
+              "patch_url": "https://github.com/rails/rails/pull/27587.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27587",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Remove deprecated callbacks from ActionDispatch middlewares",
+            "updated_at": "2017-01-06T09:48:43Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27587",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+              "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+              "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+              "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+              "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/rafaelfranca",
+              "id": 47848,
+              "login": "rafaelfranca",
+              "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+              "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+              "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/rafaelfranca",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/5402?v=3",
+              "events_url": "https://api.github.com/users/senny/events{/privacy}",
+              "followers_url": "https://api.github.com/users/senny/followers",
+              "following_url": "https://api.github.com/users/senny/following{/other_user}",
+              "gists_url": "https://api.github.com/users/senny/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/senny",
+              "id": 5402,
+              "login": "senny",
+              "organizations_url": "https://api.github.com/users/senny/orgs",
+              "received_events_url": "https://api.github.com/users/senny/received_events",
+              "repos_url": "https://api.github.com/users/senny/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/senny/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/senny/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/senny",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/5402?v=3",
+                "events_url": "https://api.github.com/users/senny/events{/privacy}",
+                "followers_url": "https://api.github.com/users/senny/followers",
+                "following_url": "https://api.github.com/users/senny/following{/other_user}",
+                "gists_url": "https://api.github.com/users/senny/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/senny",
+                "id": 5402,
+                "login": "senny",
+                "organizations_url": "https://api.github.com/users/senny/orgs",
+                "received_events_url": "https://api.github.com/users/senny/received_events",
+                "repos_url": "https://api.github.com/users/senny/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/senny/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/senny/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/senny",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27585/comments",
+            "created_at": "2017-01-05T21:02:10Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27585/events",
+            "html_url": "https://github.com/rails/rails/pull/27585",
+            "id": 199058459,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "fbca04",
+                "default": false,
+                "id": 70310659,
+                "name": "PostgreSQL",
+                "url": "https://api.github.com/repos/rails/rails/labels/PostgreSQL",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27585/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27585,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27585.diff",
+              "html_url": "https://github.com/rails/rails/pull/27585",
+              "patch_url": "https://github.com/rails/rails/pull/27585.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27585",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Test inconsistent behavior of infinite values in PG date columns.",
+            "updated_at": "2017-01-05T21:26:03Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27585",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/198711?v=3",
+              "events_url": "https://api.github.com/users/sbleon/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sbleon/followers",
+              "following_url": "https://api.github.com/users/sbleon/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sbleon/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sbleon",
+              "id": 198711,
+              "login": "sbleon",
+              "organizations_url": "https://api.github.com/users/sbleon/orgs",
+              "received_events_url": "https://api.github.com/users/sbleon/received_events",
+              "repos_url": "https://api.github.com/users/sbleon/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sbleon/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sbleon/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sbleon",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27582/comments",
+            "created_at": "2017-01-05T14:04:47Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27582/events",
+            "html_url": "https://github.com/rails/rails/issues/27582",
+            "id": 198962990,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "006b75",
+                "default": false,
+                "id": 41328116,
+                "name": "attached PR",
+                "url": "https://api.github.com/repos/rails/rails/labels/attached%20PR",
+              },
+              Object {
+                "color": "009800",
+                "default": false,
+                "id": 126910270,
+                "name": "With reproduction steps",
+                "url": "https://api.github.com/repos/rails/rails/labels/With%20reproduction%20steps",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27582/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27582,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "ActiveRecord::StatementInvalid in after_touch callback when using associations.",
+            "updated_at": "2017-01-05T20:19:36Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27582",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/792820?v=3",
+              "events_url": "https://api.github.com/users/yukideluxe/events{/privacy}",
+              "followers_url": "https://api.github.com/users/yukideluxe/followers",
+              "following_url": "https://api.github.com/users/yukideluxe/following{/other_user}",
+              "gists_url": "https://api.github.com/users/yukideluxe/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/yukideluxe",
+              "id": 792820,
+              "login": "yukideluxe",
+              "organizations_url": "https://api.github.com/users/yukideluxe/orgs",
+              "received_events_url": "https://api.github.com/users/yukideluxe/received_events",
+              "repos_url": "https://api.github.com/users/yukideluxe/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/yukideluxe/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/yukideluxe/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/yukideluxe",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+              "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+              "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+              "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+              "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/rafaelfranca",
+              "id": 47848,
+              "login": "rafaelfranca",
+              "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+              "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+              "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/rafaelfranca",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+                "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+                "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+                "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+                "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/rafaelfranca",
+                "id": 47848,
+                "login": "rafaelfranca",
+                "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+                "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+                "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/rafaelfranca",
+              },
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/833383?v=3",
+                "events_url": "https://api.github.com/users/arthurnn/events{/privacy}",
+                "followers_url": "https://api.github.com/users/arthurnn/followers",
+                "following_url": "https://api.github.com/users/arthurnn/following{/other_user}",
+                "gists_url": "https://api.github.com/users/arthurnn/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/arthurnn",
+                "id": 833383,
+                "login": "arthurnn",
+                "organizations_url": "https://api.github.com/users/arthurnn/orgs",
+                "received_events_url": "https://api.github.com/users/arthurnn/received_events",
+                "repos_url": "https://api.github.com/users/arthurnn/repos",
+                "site_admin": true,
+                "starred_url": "https://api.github.com/users/arthurnn/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/arthurnn/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/arthurnn",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27581/comments",
+            "created_at": "2017-01-05T13:26:42Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27581/events",
+            "html_url": "https://github.com/rails/rails/issues/27581",
+            "id": 198955439,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "f7c6c7",
+                "default": false,
+                "id": 149514554,
+                "name": "pinned",
+                "url": "https://api.github.com/repos/rails/rails/labels/pinned",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27581/labels{/name}",
+            "locked": false,
+            "milestone": Object {
+              "closed_at": null,
+              "closed_issues": 24,
+              "created_at": "2016-02-24T03:19:34Z",
+              "creator": Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+                "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+                "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+                "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+                "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/rafaelfranca",
+                "id": 47848,
+                "login": "rafaelfranca",
+                "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+                "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+                "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/rafaelfranca",
+              },
+              "description": "",
+              "due_on": null,
+              "html_url": "https://github.com/rails/rails/milestone/49",
+              "id": 1601639,
+              "labels_url": "https://api.github.com/repos/rails/rails/milestones/49/labels",
+              "number": 49,
+              "open_issues": 16,
+              "state": "open",
+              "title": "5.1.0",
+              "updated_at": "2017-01-06T09:48:36Z",
+              "url": "https://api.github.com/repos/rails/rails/milestones/49",
+            },
+            "number": 27581,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Deferred fixture enrolment causes over-eager connection",
+            "updated_at": "2017-01-06T16:53:27Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27581",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+              "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+              "followers_url": "https://api.github.com/users/matthewd/followers",
+              "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+              "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/matthewd",
+              "id": 1034,
+              "login": "matthewd",
+              "organizations_url": "https://api.github.com/users/matthewd/orgs",
+              "received_events_url": "https://api.github.com/users/matthewd/received_events",
+              "repos_url": "https://api.github.com/users/matthewd/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/matthewd",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+              "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+              "followers_url": "https://api.github.com/users/matthewd/followers",
+              "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+              "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/matthewd",
+              "id": 1034,
+              "login": "matthewd",
+              "organizations_url": "https://api.github.com/users/matthewd/orgs",
+              "received_events_url": "https://api.github.com/users/matthewd/received_events",
+              "repos_url": "https://api.github.com/users/matthewd/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/matthewd",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+                "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+                "followers_url": "https://api.github.com/users/matthewd/followers",
+                "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+                "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/matthewd",
+                "id": 1034,
+                "login": "matthewd",
+                "organizations_url": "https://api.github.com/users/matthewd/orgs",
+                "received_events_url": "https://api.github.com/users/matthewd/received_events",
+                "repos_url": "https://api.github.com/users/matthewd/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/matthewd",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 1,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27577/comments",
+            "created_at": "2017-01-05T03:03:54Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27577/events",
+            "html_url": "https://github.com/rails/rails/pull/27577",
+            "id": 198865914,
+            "labels": Array [
+              Object {
+                "color": "bfdadc",
+                "default": false,
+                "id": 300028327,
+                "name": "actioncable",
+                "url": "https://api.github.com/repos/rails/rails/labels/actioncable",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27577/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27577,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27577.diff",
+              "html_url": "https://github.com/rails/rails/pull/27577",
+              "patch_url": "https://github.com/rails/rails/pull/27577.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27577",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Action Cable owns database connection, not Active Record",
+            "updated_at": "2017-01-06T00:31:30Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27577",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/3020626?v=3",
+              "events_url": "https://api.github.com/users/maclover7/events{/privacy}",
+              "followers_url": "https://api.github.com/users/maclover7/followers",
+              "following_url": "https://api.github.com/users/maclover7/following{/other_user}",
+              "gists_url": "https://api.github.com/users/maclover7/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/maclover7",
+              "id": 3020626,
+              "login": "maclover7",
+              "organizations_url": "https://api.github.com/users/maclover7/orgs",
+              "received_events_url": "https://api.github.com/users/maclover7/received_events",
+              "repos_url": "https://api.github.com/users/maclover7/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/maclover7/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/maclover7/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/maclover7",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 0,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27572/comments",
+            "created_at": "2017-01-04T17:51:46Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27572/events",
+            "html_url": "https://github.com/rails/rails/pull/27572",
+            "id": 198769412,
+            "labels": Array [
+              Object {
+                "color": "8BE06E",
+                "default": false,
+                "id": 107195,
+                "name": "railties",
+                "url": "https://api.github.com/repos/rails/rails/labels/railties",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27572/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27572,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27572.diff",
+              "html_url": "https://github.com/rails/rails/pull/27572",
+              "patch_url": "https://github.com/rails/rails/pull/27572.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27572",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Simplify the version specifier generated by prereleases",
+            "updated_at": "2017-01-04T20:05:21Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27572",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+              "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+              "followers_url": "https://api.github.com/users/matthewd/followers",
+              "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+              "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/matthewd",
+              "id": 1034,
+              "login": "matthewd",
+              "organizations_url": "https://api.github.com/users/matthewd/orgs",
+              "received_events_url": "https://api.github.com/users/matthewd/received_events",
+              "repos_url": "https://api.github.com/users/matthewd/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/matthewd",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 0,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27570/comments",
+            "created_at": "2017-01-04T14:49:24Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27570/events",
+            "html_url": "https://github.com/rails/rails/issues/27570",
+            "id": 198724545,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27570/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27570,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "ActiveRecord::Relation#cache_key returns same key for different records with hm:t association",
+            "updated_at": "2017-01-04T14:49:24Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27570",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/5355?v=3",
+              "events_url": "https://api.github.com/users/javan/events{/privacy}",
+              "followers_url": "https://api.github.com/users/javan/followers",
+              "following_url": "https://api.github.com/users/javan/following{/other_user}",
+              "gists_url": "https://api.github.com/users/javan/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/javan",
+              "id": 5355,
+              "login": "javan",
+              "organizations_url": "https://api.github.com/users/javan/orgs",
+              "received_events_url": "https://api.github.com/users/javan/received_events",
+              "repos_url": "https://api.github.com/users/javan/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/javan/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/javan/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/javan",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 7,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27567/comments",
+            "created_at": "2017-01-04T08:27:28Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27567/events",
+            "html_url": "https://github.com/rails/rails/issues/27567",
+            "id": 198653427,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27567/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27567,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "why not run destroy callbacks when updating assoication_ids ",
+            "updated_at": "2017-01-06T01:33:51Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27567",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/8272538?v=3",
+              "events_url": "https://api.github.com/users/hw676018683/events{/privacy}",
+              "followers_url": "https://api.github.com/users/hw676018683/followers",
+              "following_url": "https://api.github.com/users/hw676018683/following{/other_user}",
+              "gists_url": "https://api.github.com/users/hw676018683/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/hw676018683",
+              "id": 8272538,
+              "login": "hw676018683",
+              "organizations_url": "https://api.github.com/users/hw676018683/orgs",
+              "received_events_url": "https://api.github.com/users/hw676018683/received_events",
+              "repos_url": "https://api.github.com/users/hw676018683/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/hw676018683/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/hw676018683/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/hw676018683",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 6,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27565/comments",
+            "created_at": "2017-01-04T03:48:42Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27565/events",
+            "html_url": "https://github.com/rails/rails/issues/27565",
+            "id": 198624771,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27565/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27565,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "has_secure_token & token_was method incompatible with some callbacks",
+            "updated_at": "2017-01-04T21:31:36Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27565",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1374212?v=3",
+              "events_url": "https://api.github.com/users/thenadz/events{/privacy}",
+              "followers_url": "https://api.github.com/users/thenadz/followers",
+              "following_url": "https://api.github.com/users/thenadz/following{/other_user}",
+              "gists_url": "https://api.github.com/users/thenadz/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/thenadz",
+              "id": 1374212,
+              "login": "thenadz",
+              "organizations_url": "https://api.github.com/users/thenadz/orgs",
+              "received_events_url": "https://api.github.com/users/thenadz/received_events",
+              "repos_url": "https://api.github.com/users/thenadz/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/thenadz/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/thenadz/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/thenadz",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+              "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+              "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+              "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+              "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/rafaelfranca",
+              "id": 47848,
+              "login": "rafaelfranca",
+              "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+              "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+              "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/rafaelfranca",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+                "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+                "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+                "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+                "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/rafaelfranca",
+                "id": 47848,
+                "login": "rafaelfranca",
+                "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+                "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+                "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/rafaelfranca",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 4,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27561/comments",
+            "created_at": "2017-01-04T00:40:04Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27561/events",
+            "html_url": "https://github.com/rails/rails/pull/27561",
+            "id": 198605171,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27561/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27561,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27561.diff",
+              "html_url": "https://github.com/rails/rails/pull/27561",
+              "patch_url": "https://github.com/rails/rails/pull/27561.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27561",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Use \`count(:all)\` in HasManyAssociation#count_records",
+            "updated_at": "2017-01-06T09:36:10Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27561",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1674076?v=3",
+              "events_url": "https://api.github.com/users/klaseskilson/events{/privacy}",
+              "followers_url": "https://api.github.com/users/klaseskilson/followers",
+              "following_url": "https://api.github.com/users/klaseskilson/following{/other_user}",
+              "gists_url": "https://api.github.com/users/klaseskilson/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/klaseskilson",
+              "id": 1674076,
+              "login": "klaseskilson",
+              "organizations_url": "https://api.github.com/users/klaseskilson/orgs",
+              "received_events_url": "https://api.github.com/users/klaseskilson/received_events",
+              "repos_url": "https://api.github.com/users/klaseskilson/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/klaseskilson/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/klaseskilson/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/klaseskilson",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+              "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+              "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+              "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+              "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/rafaelfranca",
+              "id": 47848,
+              "login": "rafaelfranca",
+              "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+              "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+              "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/rafaelfranca",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/47848?v=3",
+                "events_url": "https://api.github.com/users/rafaelfranca/events{/privacy}",
+                "followers_url": "https://api.github.com/users/rafaelfranca/followers",
+                "following_url": "https://api.github.com/users/rafaelfranca/following{/other_user}",
+                "gists_url": "https://api.github.com/users/rafaelfranca/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/rafaelfranca",
+                "id": 47848,
+                "login": "rafaelfranca",
+                "organizations_url": "https://api.github.com/users/rafaelfranca/orgs",
+                "received_events_url": "https://api.github.com/users/rafaelfranca/received_events",
+                "repos_url": "https://api.github.com/users/rafaelfranca/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/rafaelfranca/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/rafaelfranca",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 4,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27551/comments",
+            "created_at": "2017-01-03T15:37:29Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27551/events",
+            "html_url": "https://github.com/rails/rails/pull/27551",
+            "id": 198500270,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "000000",
+                "default": false,
+                "id": 257468118,
+                "name": "needs work",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20work",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27551/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27551,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27551.diff",
+              "html_url": "https://github.com/rails/rails/pull/27551",
+              "patch_url": "https://github.com/rails/rails/pull/27551.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27551",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Deprecate reflection class name to accept a class",
+            "updated_at": "2017-01-04T02:17:01Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27551",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/522155?v=3",
+              "events_url": "https://api.github.com/users/kirs/events{/privacy}",
+              "followers_url": "https://api.github.com/users/kirs/followers",
+              "following_url": "https://api.github.com/users/kirs/following{/other_user}",
+              "gists_url": "https://api.github.com/users/kirs/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/kirs",
+              "id": 522155,
+              "login": "kirs",
+              "organizations_url": "https://api.github.com/users/kirs/orgs",
+              "received_events_url": "https://api.github.com/users/kirs/received_events",
+              "repos_url": "https://api.github.com/users/kirs/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/kirs/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/kirs/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/kirs",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/3020626?v=3",
+              "events_url": "https://api.github.com/users/maclover7/events{/privacy}",
+              "followers_url": "https://api.github.com/users/maclover7/followers",
+              "following_url": "https://api.github.com/users/maclover7/following{/other_user}",
+              "gists_url": "https://api.github.com/users/maclover7/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/maclover7",
+              "id": 3020626,
+              "login": "maclover7",
+              "organizations_url": "https://api.github.com/users/maclover7/orgs",
+              "received_events_url": "https://api.github.com/users/maclover7/received_events",
+              "repos_url": "https://api.github.com/users/maclover7/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/maclover7/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/maclover7/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/maclover7",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/3020626?v=3",
+                "events_url": "https://api.github.com/users/maclover7/events{/privacy}",
+                "followers_url": "https://api.github.com/users/maclover7/followers",
+                "following_url": "https://api.github.com/users/maclover7/following{/other_user}",
+                "gists_url": "https://api.github.com/users/maclover7/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/maclover7",
+                "id": 3020626,
+                "login": "maclover7",
+                "organizations_url": "https://api.github.com/users/maclover7/orgs",
+                "received_events_url": "https://api.github.com/users/maclover7/received_events",
+                "repos_url": "https://api.github.com/users/maclover7/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/maclover7/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/maclover7/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/maclover7",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 10,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27547/comments",
+            "created_at": "2017-01-03T04:04:55Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27547/events",
+            "html_url": "https://github.com/rails/rails/issues/27547",
+            "id": 198407221,
+            "labels": Array [
+              Object {
+                "color": "bfdadc",
+                "default": false,
+                "id": 300028327,
+                "name": "actioncable",
+                "url": "https://api.github.com/repos/rails/rails/labels/actioncable",
+              },
+              Object {
+                "color": "006b75",
+                "default": false,
+                "id": 41328116,
+                "name": "attached PR",
+                "url": "https://api.github.com/repos/rails/rails/labels/attached%20PR",
+              },
+              Object {
+                "color": "009800",
+                "default": false,
+                "id": 126910270,
+                "name": "With reproduction steps",
+                "url": "https://api.github.com/repos/rails/rails/labels/With%20reproduction%20steps",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27547/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27547,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Postgresql Action Cable connection adapter breaks code-reloading in development",
+            "updated_at": "2017-01-05T03:04:28Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27547",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1424?v=3",
+              "events_url": "https://api.github.com/users/mcolyer/events{/privacy}",
+              "followers_url": "https://api.github.com/users/mcolyer/followers",
+              "following_url": "https://api.github.com/users/mcolyer/following{/other_user}",
+              "gists_url": "https://api.github.com/users/mcolyer/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/mcolyer",
+              "id": 1424,
+              "login": "mcolyer",
+              "organizations_url": "https://api.github.com/users/mcolyer/orgs",
+              "received_events_url": "https://api.github.com/users/mcolyer/received_events",
+              "repos_url": "https://api.github.com/users/mcolyer/repos",
+              "site_admin": true,
+              "starred_url": "https://api.github.com/users/mcolyer/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/mcolyer/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/mcolyer",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 3,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27516/comments",
+            "created_at": "2016-12-30T21:43:35Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27516/events",
+            "html_url": "https://github.com/rails/rails/issues/27516",
+            "id": 198197870,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "006b75",
+                "default": false,
+                "id": 41328116,
+                "name": "attached PR",
+                "url": "https://api.github.com/repos/rails/rails/labels/attached%20PR",
+              },
+              Object {
+                "color": "02d7e1",
+                "default": false,
+                "id": 150377,
+                "name": "docs",
+                "url": "https://api.github.com/repos/rails/rails/labels/docs",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27516/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27516,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Rails Guides Active Record Associations Conflicting Information",
+            "updated_at": "2017-01-01T19:36:22Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27516",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/4708681?v=3",
+              "events_url": "https://api.github.com/users/davidsherline/events{/privacy}",
+              "followers_url": "https://api.github.com/users/davidsherline/followers",
+              "following_url": "https://api.github.com/users/davidsherline/following{/other_user}",
+              "gists_url": "https://api.github.com/users/davidsherline/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/davidsherline",
+              "id": 4708681,
+              "login": "davidsherline",
+              "organizations_url": "https://api.github.com/users/davidsherline/orgs",
+              "received_events_url": "https://api.github.com/users/davidsherline/received_events",
+              "repos_url": "https://api.github.com/users/davidsherline/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/davidsherline/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/davidsherline/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/davidsherline",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 1,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27494/comments",
+            "created_at": "2016-12-29T11:26:39Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27494/events",
+            "html_url": "https://github.com/rails/rails/pull/27494",
+            "id": 197992968,
+            "labels": Array [
+              Object {
+                "color": "FC9300",
+                "default": false,
+                "id": 107194,
+                "name": "activesupport",
+                "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+              },
+              Object {
+                "color": "02d7e1",
+                "default": false,
+                "id": 150377,
+                "name": "docs",
+                "url": "https://api.github.com/repos/rails/rails/labels/docs",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27494/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27494,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27494.diff",
+              "html_url": "https://github.com/rails/rails/pull/27494",
+              "patch_url": "https://github.com/rails/rails/pull/27494.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27494",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Start on a guide for the Executor & Load Interlock",
+            "updated_at": "2016-12-30T04:36:41Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27494",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+              "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+              "followers_url": "https://api.github.com/users/matthewd/followers",
+              "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+              "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/matthewd",
+              "id": 1034,
+              "login": "matthewd",
+              "organizations_url": "https://api.github.com/users/matthewd/orgs",
+              "received_events_url": "https://api.github.com/users/matthewd/received_events",
+              "repos_url": "https://api.github.com/users/matthewd/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/matthewd",
+            },
+          },
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+              "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+              "followers_url": "https://api.github.com/users/matthewd/followers",
+              "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+              "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/matthewd",
+              "id": 1034,
+              "login": "matthewd",
+              "organizations_url": "https://api.github.com/users/matthewd/orgs",
+              "received_events_url": "https://api.github.com/users/matthewd/received_events",
+              "repos_url": "https://api.github.com/users/matthewd/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/matthewd",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1034?v=3",
+                "events_url": "https://api.github.com/users/matthewd/events{/privacy}",
+                "followers_url": "https://api.github.com/users/matthewd/followers",
+                "following_url": "https://api.github.com/users/matthewd/following{/other_user}",
+                "gists_url": "https://api.github.com/users/matthewd/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/matthewd",
+                "id": 1034,
+                "login": "matthewd",
+                "organizations_url": "https://api.github.com/users/matthewd/orgs",
+                "received_events_url": "https://api.github.com/users/matthewd/received_events",
+                "repos_url": "https://api.github.com/users/matthewd/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/matthewd/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/matthewd/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/matthewd",
+              },
+            ],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 1,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27484/comments",
+            "created_at": "2016-12-28T19:25:48Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27484/events",
+            "html_url": "https://github.com/rails/rails/pull/27484",
+            "id": 197903570,
+            "labels": Array [
+              Object {
+                "color": "bfdadc",
+                "default": false,
+                "id": 300028327,
+                "name": "actioncable",
+                "url": "https://api.github.com/repos/rails/rails/labels/actioncable",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27484/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27484,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27484.diff",
+              "html_url": "https://github.com/rails/rails/pull/27484",
+              "patch_url": "https://github.com/rails/rails/pull/27484.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27484",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Add \'failed\' notification about the connection failed event of WebSocket",
+            "updated_at": "2016-12-29T14:58:44Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27484",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/4303705?v=3",
+              "events_url": "https://api.github.com/users/ninjarhyme/events{/privacy}",
+              "followers_url": "https://api.github.com/users/ninjarhyme/followers",
+              "following_url": "https://api.github.com/users/ninjarhyme/following{/other_user}",
+              "gists_url": "https://api.github.com/users/ninjarhyme/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/ninjarhyme",
+              "id": 4303705,
+              "login": "ninjarhyme",
+              "organizations_url": "https://api.github.com/users/ninjarhyme/orgs",
+              "received_events_url": "https://api.github.com/users/ninjarhyme/received_events",
+              "repos_url": "https://api.github.com/users/ninjarhyme/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/ninjarhyme/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/ninjarhyme/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/ninjarhyme",
+            },
+          },
+          Object {
+            "assignee": null,
+            "assignees": Array [],
+            "body": "something without newlines",
+            "closed_at": null,
+            "comments": 7,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27480/comments",
+            "created_at": "2016-12-28T14:29:16Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27480/events",
+            "html_url": "https://github.com/rails/rails/issues/27480",
+            "id": 197861703,
+            "labels": Array [
+              Object {
+                "color": "d7e102",
+                "default": false,
+                "id": 3666649,
+                "name": "actionview",
+                "url": "https://api.github.com/repos/rails/rails/labels/actionview",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+              Object {
+                "color": "e10c02",
+                "default": false,
+                "id": 107186,
+                "name": "regression",
+                "url": "https://api.github.com/repos/rails/rails/labels/regression",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27480/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27480,
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Regression in render_to_string from 5.0.0.1 to 5.0.1 when passing instance variables to :locals?",
+            "updated_at": "2017-01-04T12:49:45Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27480",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/32246?v=3",
+              "events_url": "https://api.github.com/users/rosenfeld/events{/privacy}",
+              "followers_url": "https://api.github.com/users/rosenfeld/followers",
+              "following_url": "https://api.github.com/users/rosenfeld/following{/other_user}",
+              "gists_url": "https://api.github.com/users/rosenfeld/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/rosenfeld",
+              "id": 32246,
+              "login": "rosenfeld",
+              "organizations_url": "https://api.github.com/users/rosenfeld/orgs",
+              "received_events_url": "https://api.github.com/users/rosenfeld/received_events",
+              "repos_url": "https://api.github.com/users/rosenfeld/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/rosenfeld/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/rosenfeld/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/rosenfeld",
+            },
+          },
+        ]
+      }>
+      <ul
+        className="issues">
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/314014?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "ededed",
+                  "default": false,
+                  "id": 128692,
+                  "name": "needs feedback",
+                  "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+                },
+              ]
+            }
+            number={27599}
+            summary="something without newlines"
+            title="Fix bug with symbolized keys in .where with nested join (alternative to #27598)"
+            username="NickLaMuro">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/314014?v=3" />
+                <div
+                  className="issue__user__name">
+                  NickLaMuro
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27599
+                  </span>
+                  <span
+                    className="issue__title">
+                    Fix bug with symbolized keys in .where with nested join (alternative to #27598)
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#ededed",
+                      }
+                    }>
+                    needs feedback
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/314014?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "ededed",
+                  "default": false,
+                  "id": 128692,
+                  "name": "needs feedback",
+                  "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+                },
+              ]
+            }
+            number={27598}
+            summary="something without newlines"
+            title="Fix bug with symbolized keys in .where with nested join"
+            username="NickLaMuro">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/314014?v=3" />
+                <div
+                  className="issue__user__name">
+                  NickLaMuro
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27598
+                  </span>
+                  <span
+                    className="issue__title">
+                    Fix bug with symbolized keys in .where with nested join
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#ededed",
+                      }
+                    }>
+                    needs feedback
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/2460418?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+              ]
+            }
+            number={27597}
+            summary="something without newlines"
+            title="Consistency between first() and last() with limit"
+            username="brchristian">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/2460418?v=3" />
+                <div
+                  className="issue__user__name">
+                  brchristian
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27597
+                  </span>
+                  <span
+                    className="issue__title">
+                    Consistency between first() and last() with limit
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/70484?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "ededed",
+                  "default": false,
+                  "id": 128692,
+                  "name": "needs feedback",
+                  "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+                },
+                Object {
+                  "color": "e10c02",
+                  "default": false,
+                  "id": 107186,
+                  "name": "regression",
+                  "url": "https://api.github.com/repos/rails/rails/labels/regression",
+                },
+                Object {
+                  "color": "009800",
+                  "default": false,
+                  "id": 126910270,
+                  "name": "With reproduction steps",
+                  "url": "https://api.github.com/repos/rails/rails/labels/With%20reproduction%20steps",
+                },
+              ]
+            }
+            number={27595}
+            summary="something without newlines"
+            title="has_many :through with \`include Comparable\`"
+            username="jnimety">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/70484?v=3" />
+                <div
+                  className="issue__user__name">
+                  jnimety
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27595
+                  </span>
+                  <span
+                    className="issue__title">
+                    has_many :through with \`include Comparable\`
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#ededed",
+                      }
+                    }>
+                    needs feedback
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#e10c02",
+                      }
+                    }>
+                    regression
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#009800",
+                      }
+                    }>
+                    With reproduction steps
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/301424?v=3"
+            labels={Array []}
+            number={27594}
+            summary="something without newlines"
+            title="clarifies usage of blocks when fetching from cache"
+            username="manvsmachine">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/301424?v=3" />
+                <div
+                  className="issue__user__name">
+                  manvsmachine
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27594
+                  </span>
+                  <span
+                    className="issue__title">
+                    clarifies usage of blocks when fetching from cache
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels" />
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/4522528?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "d7e102",
+                  "default": false,
+                  "id": 3666649,
+                  "name": "actionview",
+                  "url": "https://api.github.com/repos/rails/rails/labels/actionview",
+                },
+              ]
+            }
+            number={27593}
+            summary="something without newlines"
+            title="Yield in partial view does not call block given by calling view"
+            username="carrieje">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/4522528?v=3" />
+                <div
+                  className="issue__user__name">
+                  carrieje
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27593
+                  </span>
+                  <span
+                    className="issue__title">
+                    Yield in partial view does not call block given by calling view
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#d7e102",
+                      }
+                    }>
+                    actionview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/615?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "8BE06E",
+                  "default": false,
+                  "id": 107195,
+                  "name": "railties",
+                  "url": "https://api.github.com/repos/rails/rails/labels/railties",
+                },
+              ]
+            }
+            number={27591}
+            summary="something without newlines"
+            title="Rails 5 scaffold_controller generates html files when --api flag is used"
+            username="codehugger">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/615?v=3" />
+                <div
+                  className="issue__user__name">
+                  codehugger
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27591
+                  </span>
+                  <span
+                    className="issue__title">
+                    Rails 5 scaffold_controller generates html files when --api flag is used
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#8BE06E",
+                      }
+                    }>
+                    railties
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/12642?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+              ]
+            }
+            number={27589}
+            summary="something without newlines"
+            title="Reduce \`serialize\` in \`changed_in_place?\`"
+            username="kamipo">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/12642?v=3" />
+                <div
+                  className="issue__user__name">
+                  kamipo
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27589
+                  </span>
+                  <span
+                    className="issue__title">
+                    Reduce \`serialize\` in \`changed_in_place?\`
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/167215?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "fbca04",
+                  "default": false,
+                  "id": 70310659,
+                  "name": "PostgreSQL",
+                  "url": "https://api.github.com/repos/rails/rails/labels/PostgreSQL",
+                },
+              ]
+            }
+            number={27588}
+            summary="something without newlines"
+            title="PostgreSQL JSONB columns do not preserve the key order of hashes"
+            username="bradleypriest">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/167215?v=3" />
+                <div
+                  className="issue__user__name">
+                  bradleypriest
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27588
+                  </span>
+                  <span
+                    className="issue__title">
+                    PostgreSQL JSONB columns do not preserve the key order of hashes
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#fbca04",
+                      }
+                    }>
+                    PostgreSQL
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/47848?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "FFF700",
+                  "default": false,
+                  "id": 107189,
+                  "name": "actionpack",
+                  "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+                },
+              ]
+            }
+            number={27587}
+            summary="something without newlines"
+            title="Remove deprecated callbacks from ActionDispatch middlewares"
+            username="rafaelfranca">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/47848?v=3" />
+                <div
+                  className="issue__user__name">
+                  rafaelfranca
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27587
+                  </span>
+                  <span
+                    className="issue__title">
+                    Remove deprecated callbacks from ActionDispatch middlewares
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#FFF700",
+                      }
+                    }>
+                    actionpack
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/198711?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "fbca04",
+                  "default": false,
+                  "id": 70310659,
+                  "name": "PostgreSQL",
+                  "url": "https://api.github.com/repos/rails/rails/labels/PostgreSQL",
+                },
+              ]
+            }
+            number={27585}
+            summary="something without newlines"
+            title="Test inconsistent behavior of infinite values in PG date columns."
+            username="sbleon">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/198711?v=3" />
+                <div
+                  className="issue__user__name">
+                  sbleon
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27585
+                  </span>
+                  <span
+                    className="issue__title">
+                    Test inconsistent behavior of infinite values in PG date columns.
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#fbca04",
+                      }
+                    }>
+                    PostgreSQL
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/792820?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "006b75",
+                  "default": false,
+                  "id": 41328116,
+                  "name": "attached PR",
+                  "url": "https://api.github.com/repos/rails/rails/labels/attached%20PR",
+                },
+                Object {
+                  "color": "009800",
+                  "default": false,
+                  "id": 126910270,
+                  "name": "With reproduction steps",
+                  "url": "https://api.github.com/repos/rails/rails/labels/With%20reproduction%20steps",
+                },
+              ]
+            }
+            number={27582}
+            summary="something without newlines"
+            title="ActiveRecord::StatementInvalid in after_touch callback when using associations."
+            username="yukideluxe">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/792820?v=3" />
+                <div
+                  className="issue__user__name">
+                  yukideluxe
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27582
+                  </span>
+                  <span
+                    className="issue__title">
+                    ActiveRecord::StatementInvalid in after_touch callback when using associations.
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#006b75",
+                      }
+                    }>
+                    attached PR
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#009800",
+                      }
+                    }>
+                    With reproduction steps
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/1034?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "f7c6c7",
+                  "default": false,
+                  "id": 149514554,
+                  "name": "pinned",
+                  "url": "https://api.github.com/repos/rails/rails/labels/pinned",
+                },
+              ]
+            }
+            number={27581}
+            summary="something without newlines"
+            title="Deferred fixture enrolment causes over-eager connection"
+            username="matthewd">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/1034?v=3" />
+                <div
+                  className="issue__user__name">
+                  matthewd
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27581
+                  </span>
+                  <span
+                    className="issue__title">
+                    Deferred fixture enrolment causes over-eager connection
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#f7c6c7",
+                      }
+                    }>
+                    pinned
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/3020626?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "bfdadc",
+                  "default": false,
+                  "id": 300028327,
+                  "name": "actioncable",
+                  "url": "https://api.github.com/repos/rails/rails/labels/actioncable",
+                },
+              ]
+            }
+            number={27577}
+            summary="something without newlines"
+            title="Action Cable owns database connection, not Active Record"
+            username="maclover7">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/3020626?v=3" />
+                <div
+                  className="issue__user__name">
+                  maclover7
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27577
+                  </span>
+                  <span
+                    className="issue__title">
+                    Action Cable owns database connection, not Active Record
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#bfdadc",
+                      }
+                    }>
+                    actioncable
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/1034?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "8BE06E",
+                  "default": false,
+                  "id": 107195,
+                  "name": "railties",
+                  "url": "https://api.github.com/repos/rails/rails/labels/railties",
+                },
+              ]
+            }
+            number={27572}
+            summary="something without newlines"
+            title="Simplify the version specifier generated by prereleases"
+            username="matthewd">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/1034?v=3" />
+                <div
+                  className="issue__user__name">
+                  matthewd
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27572
+                  </span>
+                  <span
+                    className="issue__title">
+                    Simplify the version specifier generated by prereleases
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#8BE06E",
+                      }
+                    }>
+                    railties
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/5355?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+              ]
+            }
+            number={27570}
+            summary="something without newlines"
+            title="ActiveRecord::Relation#cache_key returns same key for different records with hm:t association"
+            username="javan">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/5355?v=3" />
+                <div
+                  className="issue__user__name">
+                  javan
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27570
+                  </span>
+                  <span
+                    className="issue__title">
+                    ActiveRecord::Relation#cache_key returns same key for different records with hm:t association
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/8272538?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+              ]
+            }
+            number={27567}
+            summary="something without newlines"
+            title="why not run destroy callbacks when updating assoication_ids "
+            username="hw676018683">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/8272538?v=3" />
+                <div
+                  className="issue__user__name">
+                  hw676018683
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27567
+                  </span>
+                  <span
+                    className="issue__title">
+                    why not run destroy callbacks when updating assoication_ids 
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/1374212?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+              ]
+            }
+            number={27565}
+            summary="something without newlines"
+            title="has_secure_token & token_was method incompatible with some callbacks"
+            username="thenadz">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/1374212?v=3" />
+                <div
+                  className="issue__user__name">
+                  thenadz
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27565
+                  </span>
+                  <span
+                    className="issue__title">
+                    has_secure_token & token_was method incompatible with some callbacks
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/1674076?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+              ]
+            }
+            number={27561}
+            summary="something without newlines"
+            title="Use \`count(:all)\` in HasManyAssociation#count_records"
+            username="klaseskilson">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/1674076?v=3" />
+                <div
+                  className="issue__user__name">
+                  klaseskilson
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27561
+                  </span>
+                  <span
+                    className="issue__title">
+                    Use \`count(:all)\` in HasManyAssociation#count_records
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/522155?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "000000",
+                  "default": false,
+                  "id": 257468118,
+                  "name": "needs work",
+                  "url": "https://api.github.com/repos/rails/rails/labels/needs%20work",
+                },
+              ]
+            }
+            number={27551}
+            summary="something without newlines"
+            title="Deprecate reflection class name to accept a class"
+            username="kirs">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/522155?v=3" />
+                <div
+                  className="issue__user__name">
+                  kirs
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27551
+                  </span>
+                  <span
+                    className="issue__title">
+                    Deprecate reflection class name to accept a class
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#000000",
+                      }
+                    }>
+                    needs work
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/1424?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "bfdadc",
+                  "default": false,
+                  "id": 300028327,
+                  "name": "actioncable",
+                  "url": "https://api.github.com/repos/rails/rails/labels/actioncable",
+                },
+                Object {
+                  "color": "006b75",
+                  "default": false,
+                  "id": 41328116,
+                  "name": "attached PR",
+                  "url": "https://api.github.com/repos/rails/rails/labels/attached%20PR",
+                },
+                Object {
+                  "color": "009800",
+                  "default": false,
+                  "id": 126910270,
+                  "name": "With reproduction steps",
+                  "url": "https://api.github.com/repos/rails/rails/labels/With%20reproduction%20steps",
+                },
+              ]
+            }
+            number={27547}
+            summary="something without newlines"
+            title="Postgresql Action Cable connection adapter breaks code-reloading in development"
+            username="mcolyer">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/1424?v=3" />
+                <div
+                  className="issue__user__name">
+                  mcolyer
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27547
+                  </span>
+                  <span
+                    className="issue__title">
+                    Postgresql Action Cable connection adapter breaks code-reloading in development
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#bfdadc",
+                      }
+                    }>
+                    actioncable
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#006b75",
+                      }
+                    }>
+                    attached PR
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#009800",
+                      }
+                    }>
+                    With reproduction steps
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/4708681?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "0b02e1",
+                  "default": false,
+                  "id": 107191,
+                  "name": "activerecord",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+                },
+                Object {
+                  "color": "006b75",
+                  "default": false,
+                  "id": 41328116,
+                  "name": "attached PR",
+                  "url": "https://api.github.com/repos/rails/rails/labels/attached%20PR",
+                },
+                Object {
+                  "color": "02d7e1",
+                  "default": false,
+                  "id": 150377,
+                  "name": "docs",
+                  "url": "https://api.github.com/repos/rails/rails/labels/docs",
+                },
+              ]
+            }
+            number={27516}
+            summary="something without newlines"
+            title="Rails Guides Active Record Associations Conflicting Information"
+            username="davidsherline">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/4708681?v=3" />
+                <div
+                  className="issue__user__name">
+                  davidsherline
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27516
+                  </span>
+                  <span
+                    className="issue__title">
+                    Rails Guides Active Record Associations Conflicting Information
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#0b02e1",
+                      }
+                    }>
+                    activerecord
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#006b75",
+                      }
+                    }>
+                    attached PR
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#02d7e1",
+                      }
+                    }>
+                    docs
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/1034?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "FC9300",
+                  "default": false,
+                  "id": 107194,
+                  "name": "activesupport",
+                  "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+                },
+                Object {
+                  "color": "02d7e1",
+                  "default": false,
+                  "id": 150377,
+                  "name": "docs",
+                  "url": "https://api.github.com/repos/rails/rails/labels/docs",
+                },
+                Object {
+                  "color": "ededed",
+                  "default": false,
+                  "id": 128692,
+                  "name": "needs feedback",
+                  "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+                },
+              ]
+            }
+            number={27494}
+            summary="something without newlines"
+            title="Start on a guide for the Executor & Load Interlock"
+            username="matthewd">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/1034?v=3" />
+                <div
+                  className="issue__user__name">
+                  matthewd
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27494
+                  </span>
+                  <span
+                    className="issue__title">
+                    Start on a guide for the Executor & Load Interlock
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#FC9300",
+                      }
+                    }>
+                    activesupport
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#02d7e1",
+                      }
+                    }>
+                    docs
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#ededed",
+                      }
+                    }>
+                    needs feedback
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/4303705?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "bfdadc",
+                  "default": false,
+                  "id": 300028327,
+                  "name": "actioncable",
+                  "url": "https://api.github.com/repos/rails/rails/labels/actioncable",
+                },
+              ]
+            }
+            number={27484}
+            summary="something without newlines"
+            title="Add \'failed\' notification about the connection failed event of WebSocket"
+            username="ninjarhyme">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/4303705?v=3" />
+                <div
+                  className="issue__user__name">
+                  ninjarhyme
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27484
+                  </span>
+                  <span
+                    className="issue__title">
+                    Add \'failed\' notification about the connection failed event of WebSocket
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#bfdadc",
+                      }
+                    }>
+                    actioncable
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+        <li>
+          <Issue
+            avatarUrl="https://avatars.githubusercontent.com/u/32246?v=3"
+            labels={
+              Array [
+                Object {
+                  "color": "d7e102",
+                  "default": false,
+                  "id": 3666649,
+                  "name": "actionview",
+                  "url": "https://api.github.com/repos/rails/rails/labels/actionview",
+                },
+                Object {
+                  "color": "ededed",
+                  "default": false,
+                  "id": 128692,
+                  "name": "needs feedback",
+                  "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+                },
+                Object {
+                  "color": "e10c02",
+                  "default": false,
+                  "id": 107186,
+                  "name": "regression",
+                  "url": "https://api.github.com/repos/rails/rails/labels/regression",
+                },
+              ]
+            }
+            number={27480}
+            summary="something without newlines"
+            title="Regression in render_to_string from 5.0.0.1 to 5.0.1 when passing instance variables to :locals?"
+            username="rosenfeld">
+            <div
+              className="issue">
+              <div
+                className="issue__user">
+                <img
+                  alt=""
+                  className="issue__user__avatar"
+                  src="https://avatars.githubusercontent.com/u/32246?v=3" />
+                <div
+                  className="issue__user__name">
+                  rosenfeld
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span
+                    className="issue__number">
+                    #
+                    27480
+                  </span>
+                  <span
+                    className="issue__title">
+                    Regression in render_to_string from 5.0.0.1 to 5.0.1 when passing instance variables to :locals?
+                  </span>
+                </div>
+                <p
+                  className="issue__summary">
+                  something without newlines
+                </p>
+                <div
+                  className="issue__labels">
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#d7e102",
+                      }
+                    }>
+                    actionview
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#ededed",
+                      }
+                    }>
+                    needs feedback
+                  </span>
+                  <span
+                    className="issue__label"
+                    style={
+                      Object {
+                        "borderColor": "#e10c02",
+                      }
+                    }>
+                    regression
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Issue>
+        </li>
+      </ul>
+    </IssueList>
+  </div>
+</IssueListPage>
+`;
