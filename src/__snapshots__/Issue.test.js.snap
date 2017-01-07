@@ -1,0 +1,44 @@
+exports[`test renders 1`] = `
+<div
+  className="issue">
+  <div
+    className="issue__user">
+    <img
+      alt=""
+      className="issue__user__avatar"
+      src="https://avatars.githubusercontent.com/u/2460418?v=3" />
+    <div
+      className="issue__user__name">
+      carrieje
+    </div>
+  </div>
+  <div>
+    <div>
+      <span
+        className="issue__number">
+        #
+        27593
+      </span>
+      <span
+        className="issue__title">
+        Yield in partial view does not call block given by calling view
+      </span>
+    </div>
+    <p
+      className="issue__summary">
+      Fixes #23979.\\n\\nAs discussed in #23979, there was an inconsistency between the way that \`first()\` and \`last()\` would interact with \`limit\`.
+    </p>
+    <div
+      className="issue__labels">
+      <span
+        className="issue__label">
+        actionview
+      </span>
+      <span
+        className="issue__label">
+        activerecord
+      </span>
+    </div>
+  </div>
+</div>
+`;
