@@ -170,7 +170,9 @@ describe('repoReducer', () => {
 
 describe('commentsReducer', () => {
   it('has initial state', () => {
-    expect(commentsReducer(undefined, {})).toEqual({});
+    expect(commentsReducer(undefined, {})).toEqual({
+      error: null
+    });
   });
 
   it('handles BEGIN', () => {
@@ -184,7 +186,8 @@ describe('commentsReducer', () => {
       issueNumber: 1
     };
     expect(commentsReducer(state, {type: GET_COMMENTS_SUCCESS, payload})).toEqual({
-      1: [1, 2, 3]
+      1: [1, 2, 3],
+      error: null
     });
   });
 
@@ -198,7 +201,8 @@ describe('commentsReducer', () => {
     };
     expect(commentsReducer(state, {type: GET_COMMENTS_SUCCESS, payload})).toEqual({
       1: [1, 2],
-      2: [3, 4]
+      2: [3, 4],
+      error: null
     });
   });
 
@@ -211,7 +215,8 @@ describe('commentsReducer', () => {
       issueNumber: 1
     };
     expect(commentsReducer(state, {type: GET_COMMENTS_SUCCESS, payload})).toEqual({
-      1: [3, 4]
+      1: [3, 4],
+      error: null
     });
   });
 

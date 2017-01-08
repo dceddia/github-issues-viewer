@@ -1,0 +1,36 @@
+exports[`test renders comments 1`] = `
+<ul
+  className="issue-detail__comments">
+  <li>
+    <IssueComment
+      comment={
+        Object {
+          "body": "a comment",
+          "id": 1,
+          "user": Object {
+            "avatar_url": "http://foo",
+            "login": "somebody",
+          },
+        }
+      } />
+  </li>
+  <li>
+    <IssueComment
+      comment={
+        Object {
+          "body": "a comment",
+          "id": 2,
+          "user": Object {
+            "avatar_url": "http://foo",
+            "login": "somebody",
+          },
+        }
+      } />
+  </li>
+</ul>
+`;
+
+exports[`test renders with no comments 1`] = `
+<ul
+  className="issue-detail__comments" />
+`;

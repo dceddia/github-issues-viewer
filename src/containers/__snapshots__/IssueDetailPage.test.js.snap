@@ -1,0 +1,1324 @@
+exports[`test renders an error when issue does not load 1`] = `
+<div
+  className="issue-detail--error">
+  <h1>
+    There was a problem loading issue #
+    1
+  </h1>
+  <p>
+    Error: something went wrong
+  </p>
+</div>
+`;
+
+exports[`test renders an issue that has comments that are being loaded 1`] = `
+<div>
+  <div
+    className="issue-detail">
+    <h1
+      className="issue-detail__title">
+      Fix bug with symbolized keys in .where with nested join (alternative to #27598)
+    </h1>
+    <div
+      className="issue-detail__meta">
+      <IssueNumber
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <IssueState
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <UserWithAvatar
+        orientation="horizontal"
+        user={
+          Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/NickLaMuro",
+            "id": 314014,
+            "login": "NickLaMuro",
+            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/NickLaMuro",
+          }
+        } />
+    </div>
+    <IssueLabels
+      labels={
+        Array [
+          Object {
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      } />
+    <hr
+      className="divider--short" />
+    <div
+      className="issue-detail__summary">
+      <ReactMarkdown
+        className="markdown"
+        containerTagName="div"
+        source="Summary
+      -------
+      In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+      
+      \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+      
+      
+      Other Information
+      -----------------
+      This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+      
+      https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+      
+      So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+      
+      This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing." />
+    </div>
+    <hr
+      className="divider--short" />
+    <div
+      className="issue-detail--comments-loading">
+      Comments loading...
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders an issue that has no comments 1`] = `
+<div>
+  <div
+    className="issue-detail">
+    <h1
+      className="issue-detail__title">
+      Fix bug with symbolized keys in .where with nested join (alternative to #27598)
+    </h1>
+    <div
+      className="issue-detail__meta">
+      <IssueNumber
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 0,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <IssueState
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 0,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <UserWithAvatar
+        orientation="horizontal"
+        user={
+          Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/NickLaMuro",
+            "id": 314014,
+            "login": "NickLaMuro",
+            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/NickLaMuro",
+          }
+        } />
+    </div>
+    <IssueLabels
+      labels={
+        Array [
+          Object {
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      } />
+    <hr
+      className="divider--short" />
+    <div
+      className="issue-detail__summary">
+      <ReactMarkdown
+        className="markdown"
+        containerTagName="div"
+        source="Summary
+      -------
+      In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+      
+      \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+      
+      
+      Other Information
+      -----------------
+      This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+      
+      https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+      
+      So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+      
+      This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing." />
+    </div>
+    <hr
+      className="divider--short" />
+    <div
+      className="issue-detail--no-comments">
+      No comments
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders an issue with a comment-loading error 1`] = `
+<div>
+  <div
+    className="issue-detail">
+    <h1
+      className="issue-detail__title">
+      Fix bug with symbolized keys in .where with nested join (alternative to #27598)
+    </h1>
+    <div
+      className="issue-detail__meta">
+      <IssueNumber
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <IssueState
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <UserWithAvatar
+        orientation="horizontal"
+        user={
+          Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/NickLaMuro",
+            "id": 314014,
+            "login": "NickLaMuro",
+            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/NickLaMuro",
+          }
+        } />
+    </div>
+    <IssueLabels
+      labels={
+        Array [
+          Object {
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      } />
+    <hr
+      className="divider--short" />
+    <div
+      className="issue-detail__summary">
+      <ReactMarkdown
+        className="markdown"
+        containerTagName="div"
+        source="Summary
+      -------
+      In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+      
+      \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+      
+      
+      Other Information
+      -----------------
+      This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+      
+      https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+      
+      So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+      
+      This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing." />
+    </div>
+    <hr
+      className="divider--short" />
+    <div
+      className="issue-detail--comments-error">
+      There was a problem fetch the comments.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders an issue with its loaded comments 1`] = `
+<div>
+  <div
+    className="issue-detail">
+    <h1
+      className="issue-detail__title">
+      Fix bug with symbolized keys in .where with nested join (alternative to #27598)
+    </h1>
+    <div
+      className="issue-detail__meta">
+      <IssueNumber
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <IssueState
+        issue={
+          Object {
+            "assignee": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+              "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+              "followers_url": "https://api.github.com/users/sgrif/followers",
+              "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+              "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/sgrif",
+              "id": 1529387,
+              "login": "sgrif",
+              "organizations_url": "https://api.github.com/users/sgrif/orgs",
+              "received_events_url": "https://api.github.com/users/sgrif/received_events",
+              "repos_url": "https://api.github.com/users/sgrif/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/sgrif",
+            },
+            "assignees": Array [
+              Object {
+                "avatar_url": "https://avatars.githubusercontent.com/u/1529387?v=3",
+                "events_url": "https://api.github.com/users/sgrif/events{/privacy}",
+                "followers_url": "https://api.github.com/users/sgrif/followers",
+                "following_url": "https://api.github.com/users/sgrif/following{/other_user}",
+                "gists_url": "https://api.github.com/users/sgrif/gists{/gist_id}",
+                "gravatar_id": "",
+                "html_url": "https://github.com/sgrif",
+                "id": 1529387,
+                "login": "sgrif",
+                "organizations_url": "https://api.github.com/users/sgrif/orgs",
+                "received_events_url": "https://api.github.com/users/sgrif/received_events",
+                "repos_url": "https://api.github.com/users/sgrif/repos",
+                "site_admin": false,
+                "starred_url": "https://api.github.com/users/sgrif/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/sgrif/subscriptions",
+                "type": "User",
+                "url": "https://api.github.com/users/sgrif",
+              },
+            ],
+            "body": "Summary
+          -------
+          In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+          
+          \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+          
+          
+          Other Information
+          -----------------
+          This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+          
+          https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+          
+          So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+          
+          This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing.",
+            "closed_at": null,
+            "comments": 2,
+            "comments_url": "https://api.github.com/repos/rails/rails/issues/27599/comments",
+            "created_at": "2017-01-07T01:05:51Z",
+            "events_url": "https://api.github.com/repos/rails/rails/issues/27599/events",
+            "html_url": "https://github.com/rails/rails/pull/27599",
+            "id": 199328180,
+            "labels": Array [
+              Object {
+                "color": "0b02e1",
+                "default": false,
+                "id": 107191,
+                "name": "activerecord",
+                "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+              },
+              Object {
+                "color": "ededed",
+                "default": false,
+                "id": 128692,
+                "name": "needs feedback",
+                "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+              },
+            ],
+            "labels_url": "https://api.github.com/repos/rails/rails/issues/27599/labels{/name}",
+            "locked": false,
+            "milestone": null,
+            "number": 27599,
+            "pull_request": Object {
+              "diff_url": "https://github.com/rails/rails/pull/27599.diff",
+              "html_url": "https://github.com/rails/rails/pull/27599",
+              "patch_url": "https://github.com/rails/rails/pull/27599.patch",
+              "url": "https://api.github.com/repos/rails/rails/pulls/27599",
+            },
+            "repository_url": "https://api.github.com/repos/rails/rails",
+            "state": "open",
+            "title": "Fix bug with symbolized keys in .where with nested join (alternative to #27598)",
+            "updated_at": "2017-01-07T01:15:38Z",
+            "url": "https://api.github.com/repos/rails/rails/issues/27599",
+            "user": Object {
+              "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+              "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+              "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+              "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+              "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/NickLaMuro",
+              "id": 314014,
+              "login": "NickLaMuro",
+              "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+              "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+              "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/NickLaMuro",
+            },
+          }
+        } />
+      <UserWithAvatar
+        orientation="horizontal"
+        user={
+          Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/NickLaMuro",
+            "id": 314014,
+            "login": "NickLaMuro",
+            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/NickLaMuro",
+          }
+        } />
+    </div>
+    <IssueLabels
+      labels={
+        Array [
+          Object {
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      } />
+    <hr
+      className="divider--short" />
+    <div
+      className="issue-detail__summary">
+      <ReactMarkdown
+        className="markdown"
+        containerTagName="div"
+        source="Summary
+      -------
+      In https://github.com/rails/rails/pull/25146, code was added to fix making where clauses against tables with an \`enum\` column with a \`join\` present as part of the query.  As part of this fix, it called \`singularize\` on the \`table_name\` variable that was passed into the \`associated_table\` method.
+      
+      \`table_name\`, in some circumstances, can also be a symbol if more than one level of joins exists in the Relation (i.e \`joins(:book => :subscription)\`).  This fixes that by adding chaning the \`.stringify_keys!\` (found in \`ActiveRecord::Relation::WhereClauseFactory\`) to be a \`.deep_stringify_keys!\` to stringfy keys at all levels.
+      
+      
+      Other Information
+      -----------------
+      This bug only surfaces when a join is made more than 1 level deep since the \`where_clause_builder\` calls \`stringify_keys!\` on the top level of the \`.where\` hash:
+      
+      https://github.com/rails/rails/blob/21e5fd4/activerecord/lib/active_record/relation/where_clause_factory.rb#L16
+      
+      So this hides this edge case from showing up in the test suite with the current coverage and the test that was in PR #25146.
+      
+      This is the alternative to https://github.com/rails/rails/pull/27598 in which the change from PR #25146 was fixed in isolation.  Instead, here we fix the false assumption that all \`table_name\` values being passed into \`.associated_table\` are a string.  This might have wider effects because of that, so that should be considered when reviewing." />
+    </div>
+    <hr
+      className="divider--short" />
+    <IssueComments
+      comments={
+        Array [
+          Object {
+            "id": 1,
+          },
+          Object {
+            "id": 2,
+          },
+        ]
+      } />
+  </div>
+</div>
+`;
+
+exports[`test renders loading 1`] = `
+<div>
+  <div
+    className="issue-detail--loading">
+    <p>
+      Loading issue #
+      1
+      ...
+    </p>
+  </div>
+</div>
+`;

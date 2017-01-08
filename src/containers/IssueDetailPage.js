@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { insertMentionLinks } from '../utils/stringUtils';
 import UserWithAvatar from '../components/UserWithAvatar';
 import IssueLabels from '../components/IssueLabels';
-
+import IssueComments from '../components/IssueComments';
 import './IssueDetailPage.css';
 
 const IssueState = ({ issue: {state} }) => (
@@ -20,34 +20,7 @@ const IssueNumber = ({ issue }) => (
   </span>
 );
 
-function IssueComments({ comments = [] }) {
-  return (
-    <ul className="issue-detail__comments">
-      {comments.map(comment =>
-        <li key={comment.id}>
-          <Comment comment={comment}/>
-        </li>
-      )}
-    </ul>
-  );
-}
-
-function Comment({ comment }) {
-  return (
-    <div className="issue-detail__comment">
-      <a href={`https://github.com/${comment.user.login}`}>
-        <img className="issue-detail__comment__avatar" src={comment.user.avatar_url} alt=""/>
-      </a>
-      <div>
-        <a href={`https://github.com/${comment.user.login}`}
-          className="issue-detail__comment__username">{comment.user.login}</a>
-        <ReactMarkdown className="markdown" source={insertMentionLinks(comment.body)}/>
-      </div>
-    </div>
-  );
-}
-
-class IssueDetailPage extends Component {
+export class IssueDetailPage extends Component {
   componentDidMount() {
     // Fetch the issue if we weren't given one
     if(!this.props.issue) {
@@ -64,8 +37,34 @@ class IssueDetailPage extends Component {
     }
   }
 
+  renderComments() {
+    const {issue, comments, commentsError} = this.props;
+
+    // Return early if there's an error
+    if(commentsError) {
+      return (
+        <div className="issue-detail--comments-error">
+          There was a problem fetch the comments.
+        </div>
+      );
+    }
+
+    // The issue has no comments
+    if(issue.comments === 0) {
+      return <div className="issue-detail--no-comments">No comments</div>;
+    }
+
+    // The issue has comments, but they're not loaded yet
+    if(!comments || comments.length === 0) {
+      return <div className="issue-detail--comments-loading">Comments loading...</div>
+    }
+
+    // Comments are loaded
+    return <IssueComments comments={comments}/>;
+  }
+
   renderContent() {
-    const {issue, comments} = this.props;
+    const {issue} = this.props;
 
     return (
       <div className="issue-detail">
@@ -81,23 +80,30 @@ class IssueDetailPage extends Component {
           <ReactMarkdown className="markdown" source={insertMentionLinks(issue.body)}/>
         </div>
         <hr className="divider--short"/>
-        {issue.comments === 0
-          ? <div>No comments</div>
-          : <IssueComments comments={comments}/>}
+        {this.renderComments()}
       </div>
     );
   }
 
   renderLoading() {
     return (
-      <div>
-        Loading issue {this.props.params.issueId}...
-      </div>
+        <div className="issue-detail--loading">
+          <p>Loading issue #{this.props.params.issueId}...</p>
+        </div>
     );
   }
 
   render() {
-    const {issue} = this.props;
+    const {issue, issueError, params} = this.props;
+
+    if(issueError) {
+      return (
+        <div className="issue-detail--error">
+          <h1>There was a problem loading issue #{params.issueId}</h1>
+          <p>{issueError.toString()}</p>
+        </div>
+      );
+    }
 
     return (
       <div>
@@ -113,14 +119,20 @@ IssueDetailPage.propTypes = {
     issueId: PropTypes.string.isRequired
   }).isRequired,
   issue: PropTypes.object,
-  comments: PropTypes.array
+  issueError: PropTypes.object,
+  comments: PropTypes.array,
+  commentsError: PropTypes.object,
+  getIssue: PropTypes.func.isRequired,
+  getComments: PropTypes.func.isRequired
 };
 
 const mapState = ({ issues, commentsByIssue }, ownProps) => {
   const issueNum = ownProps.params.issueId;
   return {
     issue: issues.issuesByNumber[issueNum],
-    comments: commentsByIssue[issueNum]
+    issueError: issues.error,
+    comments: commentsByIssue[issueNum],
+    commentsError: commentsByIssue['error']
   };
 };
 

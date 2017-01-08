@@ -1,0 +1,23 @@
+exports[`test renders a comment 1`] = `
+<div
+  className="issue-detail__comment">
+  <a
+    href="https://github.com/somebody">
+    <UserWithAvatar
+      orientation="horizontal"
+      user={
+        Object {
+          "avatar_url": "http://foo",
+          "login": "somebody",
+        }
+      } />
+  </a>
+  <div
+    className="issue-detail__comment__body">
+    <ReactMarkdown
+      className="markdown"
+      containerTagName="div"
+      source="a comment" />
+  </div>
+</div>
+`;

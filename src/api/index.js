@@ -20,6 +20,22 @@ if(USE_STATIC_DATA) {
     .reply(200, page3.data, {link: page3.link});
   mock.onGet('https://api.github.com/repos/rails/rails/issues?per_page=25&page=49')
     .reply(200, page49.data, {link: page49.link});
+  mock.onGet(/issues\/404$/).reply(404);
+  mock.onGet(/issues\/slow$/).reply(function(config) {
+    return new Promise((resolve, reject) => {
+      resolve([200, page1.data, {link: page1.link}]);
+    });
+  });
+mock.onGet(/issues\/99$/)
+    .reply(config => {
+      const number = config.url.match(/issues\/(\d+)/)[1];
+      const issue = {
+        ...page1.data[0],
+        number,
+        comments: 0
+      };
+      return [200, issue];
+    });
   mock.onGet(/issues\/\d+$/)
     .reply(config => {
       const number = config.url.match(/issues\/(\d+)/)[1];
@@ -30,9 +46,7 @@ if(USE_STATIC_DATA) {
       return [200, issue];
     });
   mock.onGet(/issues\/\d+\/comments$/)
-    .reply(config => {
-      return [200, comments];
-    });
+    .reply(200, comments);
 }
 
 const isLastPage = (pageLinks) => {
@@ -83,11 +97,11 @@ export function getIssue(org, repo, number) {
   const url = `https://api.github.com/repos/${org}/${repo}/issues/${number}`;
   return axios.get(url)
     .then(res => res.data)
-    .catch(err => Promise.reject({}));
+    .catch(err => Promise.reject(err));
 }
 
 export function getComments(url) {
   return axios.get(url)
     .then(res => res.data)
-    .catch(err => Promise.reject({}));
+    .catch(err => Promise.reject(err));
 }

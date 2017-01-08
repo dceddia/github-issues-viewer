@@ -16,11 +16,6 @@ const initialIssuesState = {
   error: null
 };
 
-const initialRepoState = {
-  openIssuesCount: -1,
-  error: null
-};
-
 export function issuesReducer(state = initialIssuesState, action) {
   switch(action.type) {
     case GET_ISSUE_BEGIN:
@@ -64,6 +59,11 @@ export function issuesReducer(state = initialIssuesState, action) {
   }
 }
 
+const initialRepoState = {
+  openIssuesCount: -1,
+  error: null
+};
+
 export function repoReducer(state = initialRepoState, action) {
   switch(action.type) {
     case GET_REPO_DETAILS_BEGIN:
@@ -85,14 +85,19 @@ export function repoReducer(state = initialRepoState, action) {
   }
 }
 
-export function commentsReducer(state = {}, action) {
+const initialCommentsState = {
+  error: null
+};
+
+export function commentsReducer(state = initialCommentsState, action) {
   switch(action.type) {
     case GET_COMMENTS_BEGIN:
       return state;
     case GET_COMMENTS_SUCCESS:
       return {
         ...state,
-        [action.payload.issueNumber]: action.payload.comments
+        [action.payload.issueNumber]: action.payload.comments,
+        error: null
       };
     case GET_COMMENTS_FAILURE:
       return {
