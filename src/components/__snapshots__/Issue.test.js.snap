@@ -24,7 +24,7 @@ exports[`test renders 1`] = `
       className="issue__summary">
       Fixes #23979.
       
-      As discussed in #23979, there was an inconsistency between the way that \`first()\` and \`last()\` would interact with \`limit\`. S
+      As discussed in #23979, there was an inconsistency between the way that \`first()\` and \`last()\` would interact with \`limit\`....
     </p>
     <IssueLabels
       labels={
