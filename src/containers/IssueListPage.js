@@ -69,7 +69,12 @@ export class IssueListPage extends Component {
   }
 
   render() {
-    const {org, repo, isLoading, issues, pageCount, openIssuesCount} = this.props;
+    const {org, repo, isLoading, issues, pageCount, openIssuesCount, issuesError} = this.props;
+
+    if(issuesError) {
+      return <div><h1>Something went wrong...</h1><div>{issuesError.toString()}</div></div>;
+    }
+
     const currentPage = Math.min(
         pageCount,
         Math.max(1,
@@ -89,7 +94,9 @@ export class IssueListPage extends Component {
             pageCount={pageCount}
             marginPagesDisplayed={2}
             pageRangeDisplayed={5}
-            onPageChange={this.handlePageChange} />
+            onPageChange={this.handlePageChange}
+            nextLabel="&rarr;"
+            previousLabel="&larr;" />
         </div>
       </div>
     );
@@ -115,6 +122,7 @@ const selectIssues = issues =>
 
 const mapStateToProps = ({ issues, repo }) => ({
   issues: selectIssues(issues),
+  issuesError: issues.error,
   openIssuesCount: repo.openIssuesCount,
   isLoading: issues.isLoading,
   pageCount: issues.pageCount

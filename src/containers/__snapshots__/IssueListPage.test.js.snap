@@ -17,12 +17,12 @@ exports[`test renders while loading 1`] = `
       forcePage={0}
       marginPagesDisplayed={2}
       nextClassName="next"
-      nextLabel="Next"
+      nextLabel="→"
       onPageChange={[Function]}
       pageCount={10}
       pageRangeDisplayed={5}
       previousClassName="previous"
-      previousLabel="Previous" />
+      previousLabel="←" />
   </div>
 </div>
 `;
@@ -2063,12 +2063,12 @@ exports[`test renders with issues 1`] = `
       forcePage={0}
       marginPagesDisplayed={2}
       nextClassName="next"
-      nextLabel="Next"
+      nextLabel="→"
       onPageChange={[Function]}
       pageCount={10}
       pageRangeDisplayed={5}
       previousClassName="previous"
-      previousLabel="Previous" />
+      previousLabel="←" />
   </div>
 </div>
 `;

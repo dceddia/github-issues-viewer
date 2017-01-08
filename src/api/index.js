@@ -55,6 +55,9 @@ const isLastPage = (pageLinks) => {
 }
 
 const getPageCount = (pageLinks) => {
+  if(!pageLinks) {
+    return 0;
+  }
   if(isLastPage(pageLinks)) {
     return parseInt(pageLinks.prev.page, 10) + 1;
   } else if(pageLinks.last) {
@@ -76,14 +79,7 @@ export function getIssues(org, repo, page = 1) {
         data: res.data
       };
     })
-    .catch(err => {
-      return Promise.reject({
-        pageLinks: {},
-        pageCount: 0,
-        data: [],
-        error: err
-      });
-    });
+    .catch(err => Promise.reject(err));
 }
 
 export function getRepoDetails(org, repo) {

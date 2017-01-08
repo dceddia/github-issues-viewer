@@ -8,9 +8,13 @@
 }
 .issues__pagination li > a {
   padding: 0.5rem;
+  margin: 1px;
   display: inline-block;
   cursor: pointer;
-  background-color: #eee;
+  background-color: #fff;
+  border: 1px solid #d8eef5;
+  border-radius: 2px;
+  min-width: 1rem;
 }
 
 .issues__pagination li > a:focus {
@@ -18,17 +22,27 @@
 }
 
 .issues__pagination li > a:hover {
-  background-color: #ccc;
+  background-color: #d8eef5;
 }
 
 .issues__pagination .selected a {
-  background-color: deepskyblue;
+  box-shadow: 0 0 2px #1b7d9e;
+  background-color: #f3fcff;
 }
 
 .issues__pagination .disabled > a {
-  color: #999;
+  color: #ccc;
+  background-color: #f8f8f8;
+  border-color: #eee;
   cursor: default;
 }
 .issues__pagination .disabled > a:hover {
-  background-color: #eee;
-} 
+  background-color: #f8f8f8;
+}
+.issues__pagination .break {
+  margin: 0 8px;
+}
+.issues__pagination .previous,
+.issues__pagination .next {
+  margin: 0 1rem;
+}
