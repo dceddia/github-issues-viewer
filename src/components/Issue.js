@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+import UserWithAvatar from './UserWithAvatar';
+import IssueLabels from './IssueLabels';
 import './Issue.css';
 
 function shorten(text = "", length = 140) {
@@ -13,29 +15,17 @@ function shorten(text = "", length = 140) {
   return cleanText.substr(0, 140);
 }
 
-export default function Issue({ number, title, labels, username, avatarUrl, summary }) {
+export default function Issue({ number, title, labels, user, summary }) {
   return (
     <div className="issue">
-      <div className="issue__user">
-        <img className="issue__user__avatar" src={avatarUrl} alt=""/>
-        <div className="issue__user__name">{username}</div>
-      </div>
+      <UserWithAvatar user={user}/>
       <div>
         <div>
           <span className="issue__number">#{number}</span>
           <span className="issue__title">{title}</span>
         </div>
         <p className="issue__summary">{shorten(summary)}</p>
-        <div className="issue__labels">
-          {labels.map(label =>
-            <span
-              key={label.id}
-              className="issue__label"
-              style={{borderColor: `#${label.color}`}}>
-              {label.name}
-            </span>
-          )}
-        </div>
+        <IssueLabels labels={labels}/>
       </div>
     </div>
   );
@@ -49,7 +39,9 @@ Issue.propTypes = {
     name: PropTypes.string,
     color: PropTypes.string
   })).isRequired,
-  username: PropTypes.string.isRequired,
-  avatarUrl: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    login: PropTypes.string.isRequired,
+    avatar_url: PropTypes.string
+  }).isRequired,
   summary: PropTypes.string.isRequired
 };

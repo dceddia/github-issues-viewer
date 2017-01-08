@@ -1,0 +1,31 @@
+.issue__user {
+  display: inline-flex;
+  align-items: center;
+}
+
+.issue__user.vertical {
+  text-align: center;
+  margin-right: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 80px;
+  max-width: 80px;
+}
+
+.issue__user__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.issue__user__name {
+  color: #555;
+  font-size: 0.8rem;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.issue__user.horizontal .issue__user__name {
+  display: inline;
+  margin-left: 0.5rem;
+}

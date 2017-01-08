@@ -14,30 +14,6 @@
   font-weight: bold;
 }
 
-.issue__user {
-  text-align: center;
-  margin-right: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 80px;
-  max-width: 80px;
-}
-
-.issue__user__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.issue__user__name {
-  color: #555;
-  font-size: 0.8rem;
-  word-wrap: break-word;
-  max-width: 100%;
-}
-
 .issue__label {
   display: inline-block;
   font-size: 0.9rem;
@@ -46,4 +22,8 @@
   border-radius: 5px;
   border: 2px solid #ccc;
   background-color: #fff;
+}
+
+.issue .issue__user {
+  margin-right: 0.5rem;
 }

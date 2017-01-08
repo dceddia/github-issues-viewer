@@ -9,7 +9,6 @@ exports[`test renders 1`] = `
       style={Object {}}
       to="/issue/27599">
       <Issue
-        avatarUrl="https://avatars.githubusercontent.com/u/314014?v=3"
         labels={
           Array [
             Object {
@@ -31,7 +30,27 @@ exports[`test renders 1`] = `
         number={27599}
         summary="something with no line breaks"
         title="Fix bug with symbolized keys in .where with nested join (alternative to #27598)"
-        username="NickLaMuro" />
+        user={
+          Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/NickLaMuro",
+            "id": 314014,
+            "login": "NickLaMuro",
+            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/NickLaMuro",
+          }
+        } />
     </Link>
   </li>
   <li
@@ -42,7 +61,6 @@ exports[`test renders 1`] = `
       style={Object {}}
       to="/issue/27598">
       <Issue
-        avatarUrl="https://avatars.githubusercontent.com/u/314014?v=3"
         labels={
           Array [
             Object {
@@ -64,7 +82,27 @@ exports[`test renders 1`] = `
         number={27598}
         summary="something with no line breaks"
         title="Fix bug with symbolized keys in .where with nested join"
-        username="NickLaMuro" />
+        user={
+          Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/NickLaMuro",
+            "id": 314014,
+            "login": "NickLaMuro",
+            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/NickLaMuro",
+          }
+        } />
     </Link>
   </li>
   <li
@@ -75,7 +113,6 @@ exports[`test renders 1`] = `
       style={Object {}}
       to="/issue/27597">
       <Issue
-        avatarUrl="https://avatars.githubusercontent.com/u/2460418?v=3"
         labels={
           Array [
             Object {
@@ -90,7 +127,27 @@ exports[`test renders 1`] = `
         number={27597}
         summary="something with no line breaks"
         title="Consistency between first() and last() with limit"
-        username="brchristian" />
+        user={
+          Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/2460418?v=3",
+            "events_url": "https://api.github.com/users/brchristian/events{/privacy}",
+            "followers_url": "https://api.github.com/users/brchristian/followers",
+            "following_url": "https://api.github.com/users/brchristian/following{/other_user}",
+            "gists_url": "https://api.github.com/users/brchristian/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/brchristian",
+            "id": 2460418,
+            "login": "brchristian",
+            "organizations_url": "https://api.github.com/users/brchristian/orgs",
+            "received_events_url": "https://api.github.com/users/brchristian/received_events",
+            "repos_url": "https://api.github.com/users/brchristian/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/brchristian/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/brchristian/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/brchristian",
+          }
+        } />
     </Link>
   </li>
 </ul>

@@ -1,17 +1,13 @@
 exports[`test renders 1`] = `
 <div
   className="issue">
-  <div
-    className="issue__user">
-    <img
-      alt=""
-      className="issue__user__avatar"
-      src="https://avatars.githubusercontent.com/u/2460418?v=3" />
-    <div
-      className="issue__user__name">
-      carrieje
-    </div>
-  </div>
+  <UserWithAvatar
+    user={
+      Object {
+        "avatar_url": "https://avatars.githubusercontent.com/u/2460418?v=3",
+        "login": "somebody",
+      }
+    } />
   <div>
     <div>
       <span
@@ -30,18 +26,16 @@ exports[`test renders 1`] = `
       
       As discussed in #23979, there was an inconsistency between the way that \`first()\` and \`last()\` would interact with \`limit\`. S
     </p>
-    <div
-      className="issue__labels">
-      <span
-        className="issue__label"
-        style={
+    <IssueLabels
+      labels={
+        Array [
           Object {
-            "borderColor": "#123456",
-          }
-        }>
-        activerecord
-      </span>
-    </div>
+            "color": "123456",
+            "id": 1,
+            "name": "activerecord",
+          },
+        ]
+      } />
   </div>
 </div>
 `;
