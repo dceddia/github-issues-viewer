@@ -6,9 +6,7 @@ import { insertMentionLinks } from '../utils/stringUtils';
 export default function IssueComment({ comment }) {
   return (
     <div className="issue-detail__comment">
-      <a href={`https://github.com/${comment.user.login}`}>
-        <UserWithAvatar user={comment.user} orientation="horizontal"/>
-      </a>
+      <UserWithAvatar user={comment.user} orientation="horizontal"/>
 
       <div className="issue-detail__comment__body">
         <ReactMarkdown className="markdown" source={insertMentionLinks(comment.body)}/>

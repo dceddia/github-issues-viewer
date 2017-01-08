@@ -3,152 +3,134 @@ exports[`test renders 1`] = `
   className="issues">
   <li
     className="issues__issue-wrapper">
-    <Link
-      className="issues__issue-link"
-      onlyActiveOnIndex={false}
-      style={Object {}}
-      to="/issue/27599">
-      <Issue
-        labels={
-          Array [
-            Object {
-              "color": "0b02e1",
-              "default": false,
-              "id": 107191,
-              "name": "activerecord",
-              "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
-            },
-            Object {
-              "color": "ededed",
-              "default": false,
-              "id": 128692,
-              "name": "needs feedback",
-              "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
-            },
-          ]
-        }
-        number={27599}
-        summary="something with no line breaks"
-        title="Fix bug with symbolized keys in .where with nested join (alternative to #27598)"
-        user={
+    <Issue
+      labels={
+        Array [
           Object {
-            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
-            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
-            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
-            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
-            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
-            "gravatar_id": "",
-            "html_url": "https://github.com/NickLaMuro",
-            "id": 314014,
-            "login": "NickLaMuro",
-            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
-            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
-            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
-            "site_admin": false,
-            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
-            "type": "User",
-            "url": "https://api.github.com/users/NickLaMuro",
-          }
-        } />
-    </Link>
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      }
+      number={27599}
+      summary="something with no line breaks"
+      title="Fix bug with symbolized keys in .where with nested join (alternative to #27598)"
+      user={
+        Object {
+          "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+          "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+          "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+          "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+          "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/NickLaMuro",
+          "id": 314014,
+          "login": "NickLaMuro",
+          "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+          "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+          "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+          "type": "User",
+          "url": "https://api.github.com/users/NickLaMuro",
+        }
+      } />
   </li>
   <li
     className="issues__issue-wrapper">
-    <Link
-      className="issues__issue-link"
-      onlyActiveOnIndex={false}
-      style={Object {}}
-      to="/issue/27598">
-      <Issue
-        labels={
-          Array [
-            Object {
-              "color": "0b02e1",
-              "default": false,
-              "id": 107191,
-              "name": "activerecord",
-              "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
-            },
-            Object {
-              "color": "ededed",
-              "default": false,
-              "id": 128692,
-              "name": "needs feedback",
-              "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
-            },
-          ]
-        }
-        number={27598}
-        summary="something with no line breaks"
-        title="Fix bug with symbolized keys in .where with nested join"
-        user={
+    <Issue
+      labels={
+        Array [
           Object {
-            "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
-            "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
-            "followers_url": "https://api.github.com/users/NickLaMuro/followers",
-            "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
-            "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
-            "gravatar_id": "",
-            "html_url": "https://github.com/NickLaMuro",
-            "id": 314014,
-            "login": "NickLaMuro",
-            "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
-            "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
-            "repos_url": "https://api.github.com/users/NickLaMuro/repos",
-            "site_admin": false,
-            "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
-            "type": "User",
-            "url": "https://api.github.com/users/NickLaMuro",
-          }
-        } />
-    </Link>
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+          Object {
+            "color": "ededed",
+            "default": false,
+            "id": 128692,
+            "name": "needs feedback",
+            "url": "https://api.github.com/repos/rails/rails/labels/needs%20feedback",
+          },
+        ]
+      }
+      number={27598}
+      summary="something with no line breaks"
+      title="Fix bug with symbolized keys in .where with nested join"
+      user={
+        Object {
+          "avatar_url": "https://avatars.githubusercontent.com/u/314014?v=3",
+          "events_url": "https://api.github.com/users/NickLaMuro/events{/privacy}",
+          "followers_url": "https://api.github.com/users/NickLaMuro/followers",
+          "following_url": "https://api.github.com/users/NickLaMuro/following{/other_user}",
+          "gists_url": "https://api.github.com/users/NickLaMuro/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/NickLaMuro",
+          "id": 314014,
+          "login": "NickLaMuro",
+          "organizations_url": "https://api.github.com/users/NickLaMuro/orgs",
+          "received_events_url": "https://api.github.com/users/NickLaMuro/received_events",
+          "repos_url": "https://api.github.com/users/NickLaMuro/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/NickLaMuro/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/NickLaMuro/subscriptions",
+          "type": "User",
+          "url": "https://api.github.com/users/NickLaMuro",
+        }
+      } />
   </li>
   <li
     className="issues__issue-wrapper">
-    <Link
-      className="issues__issue-link"
-      onlyActiveOnIndex={false}
-      style={Object {}}
-      to="/issue/27597">
-      <Issue
-        labels={
-          Array [
-            Object {
-              "color": "0b02e1",
-              "default": false,
-              "id": 107191,
-              "name": "activerecord",
-              "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
-            },
-          ]
-        }
-        number={27597}
-        summary="something with no line breaks"
-        title="Consistency between first() and last() with limit"
-        user={
+    <Issue
+      labels={
+        Array [
           Object {
-            "avatar_url": "https://avatars.githubusercontent.com/u/2460418?v=3",
-            "events_url": "https://api.github.com/users/brchristian/events{/privacy}",
-            "followers_url": "https://api.github.com/users/brchristian/followers",
-            "following_url": "https://api.github.com/users/brchristian/following{/other_user}",
-            "gists_url": "https://api.github.com/users/brchristian/gists{/gist_id}",
-            "gravatar_id": "",
-            "html_url": "https://github.com/brchristian",
-            "id": 2460418,
-            "login": "brchristian",
-            "organizations_url": "https://api.github.com/users/brchristian/orgs",
-            "received_events_url": "https://api.github.com/users/brchristian/received_events",
-            "repos_url": "https://api.github.com/users/brchristian/repos",
-            "site_admin": false,
-            "starred_url": "https://api.github.com/users/brchristian/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/brchristian/subscriptions",
-            "type": "User",
-            "url": "https://api.github.com/users/brchristian",
-          }
-        } />
-    </Link>
+            "color": "0b02e1",
+            "default": false,
+            "id": 107191,
+            "name": "activerecord",
+            "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+          },
+        ]
+      }
+      number={27597}
+      summary="something with no line breaks"
+      title="Consistency between first() and last() with limit"
+      user={
+        Object {
+          "avatar_url": "https://avatars.githubusercontent.com/u/2460418?v=3",
+          "events_url": "https://api.github.com/users/brchristian/events{/privacy}",
+          "followers_url": "https://api.github.com/users/brchristian/followers",
+          "following_url": "https://api.github.com/users/brchristian/following{/other_user}",
+          "gists_url": "https://api.github.com/users/brchristian/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/brchristian",
+          "id": 2460418,
+          "login": "brchristian",
+          "organizations_url": "https://api.github.com/users/brchristian/orgs",
+          "received_events_url": "https://api.github.com/users/brchristian/received_events",
+          "repos_url": "https://api.github.com/users/brchristian/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/brchristian/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/brchristian/subscriptions",
+          "type": "User",
+          "url": "https://api.github.com/users/brchristian",
+        }
+      } />
   </li>
 </ul>
 `;

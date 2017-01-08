@@ -9,7 +9,10 @@ exports[`test renders 1`] = `
       }
     } />
   <div>
-    <div>
+    <Link
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to="/issue/27593">
       <span
         className="issue__number">
         #
@@ -19,7 +22,7 @@ exports[`test renders 1`] = `
         className="issue__title">
         Yield in partial view does not call block given by calling view
       </span>
-    </div>
+    </Link>
     <p
       className="issue__summary">
       Fixes #23979.

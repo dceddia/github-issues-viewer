@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 import './UserWithAvatar.css';
 
 const UserWithAvatar = ({ user, orientation = 'vertical' }) => (
-  <span className={`issue__user ${orientation}`}>
+  <a href={`https://github.com/${user.login}`} className={`issue__user ${orientation}`}>
     <img className="issue__user__avatar" src={user.avatar_url} alt=""/>
     <div className="issue__user__name">{user.login}</div>
-  </span>
+  </a>
 );
 
 UserWithAvatar.propTypes = {

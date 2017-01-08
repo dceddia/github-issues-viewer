@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 import Issue from './Issue';
 import './IssueList.css';
 
@@ -8,14 +7,12 @@ export default function IssueList({ issues }) {
     <ul className="issues">
       {issues.map(issue =>
         <li key={issue.id} className="issues__issue-wrapper">
-          <Link to={`/issue/${issue.number}`} className="issues__issue-link">
             <Issue
               number={issue.number}
               user={issue.user}
               title={issue.title}
               summary={issue.body}
               labels={issue.labels} />
-          </Link>
         </li>
       )}
     </ul>

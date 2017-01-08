@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 import UserWithAvatar from './UserWithAvatar';
 import IssueLabels from './IssueLabels';
 import { shorten } from '../utils/stringUtils';
@@ -9,10 +10,10 @@ export default function Issue({ number, title, labels, user, summary }) {
     <div className="issue">
       <UserWithAvatar user={user}/>
       <div>
-        <div>
+        <Link to={`/issue/${number}`}>
           <span className="issue__number">#{number}</span>
           <span className="issue__title">{title}</span>
-        </div>
+        </Link>
         <p className="issue__summary">{shorten(summary)}</p>
         <IssueLabels labels={labels}/>
       </div>
