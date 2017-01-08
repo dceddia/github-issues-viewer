@@ -70,7 +70,7 @@
   border-radius: 50%;
   margin-right: 0.5rem;
   min-width: 40px;
-  display: block;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
 }
 
 .issue-detail__comment__username {
