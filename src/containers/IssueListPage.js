@@ -68,6 +68,13 @@ export class IssueListPage extends Component {
     });
   }
 
+  componentWillReceiveProps(newProps) {
+    const {getIssues, org, repo, location} = newProps;
+    if(location.query.page !== this.props.location.query.page) {
+      getIssues(org, repo, location.query.page);
+    }
+  }
+
   render() {
     const {org, repo, isLoading, issues, pageCount, openIssuesCount, issuesError} = this.props;
 

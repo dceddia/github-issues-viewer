@@ -76,3 +76,54 @@ it('calls getIssues and getRepoDetails', () => {
   expect(mockGetIssues).toBeCalled();
   expect(mockGetRepoDetails).toBeCalled();
 });
+
+describe('fetching data', () => {
+  let getIssues, getRepoDetails;
+
+  beforeEach(() => {
+    getIssues = jest.fn();
+    getRepoDetails = jest.fn();
+  });
+
+  const render = ({...props}) => {
+    return mount(
+      <IssueListPage
+        org="rails"
+        repo="rails"
+        issues={[]}
+        isLoading={true}
+        openIssuesCount={-1}
+        pageCount={1}
+        location={{query: {}}}
+        getIssues={getIssues}
+        getRepoDetails={getRepoDetails}
+        {...props} />,
+        { context }
+    );
+  };
+
+  it('fetches data on mount w/ no page set', () => {
+    render({
+      location: {query: {}}
+    });
+    expect(getIssues).toBeCalledWith("rails", "rails", 1);
+  });
+
+  it('fetches data based on page from url', () => {
+    render({
+      location: {query: {page: 7}}
+    });
+    expect(getIssues).toBeCalledWith("rails", "rails", 7);
+  });
+
+  it('fetches data when page changes', () => {
+    const wrapper = render({
+      location: {query: {page: 7}}
+    });
+    expect(getIssues).toBeCalledWith("rails", "rails", 7);
+    wrapper.setProps({location: {query: {page: 8}}});
+    expect(getIssues).toBeCalledWith("rails", "rails", 8);
+  })
+});
+
+
