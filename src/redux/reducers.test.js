@@ -14,7 +14,8 @@ describe('issuesReducer', () => {
         currentPageIssues: [],
         pageCount: 0,
         pageLinks: {},
-        isLoading: false
+        isLoading: false,
+        error: null
       });
     });
 
@@ -50,7 +51,8 @@ describe('issuesReducer', () => {
         currentPageIssues: [1, 2],
         pageCount: 42,
         pageLinks: payload.pageLinks,
-        isLoading: false
+        isLoading: false,
+        error: null
       });
     });
 
@@ -66,7 +68,8 @@ describe('issuesReducer', () => {
         currentPageIssues: [],
         pageCount: 42,
         pageLinks: payload.pageLinks,
-        isLoading: false
+        isLoading: false,
+        error: null
       });
     });
   });
@@ -84,7 +87,8 @@ describe('issuesReducer', () => {
         issuesByNumber: {
           1: {number: 1}
         },
-        isLoading: false
+        isLoading: false,
+        error: null
       });
     });
 
@@ -101,7 +105,8 @@ describe('issuesReducer', () => {
           2: {number: 2},
           3: {number: 3}
         },
-        isLoading: false
+        isLoading: false,
+        error: null
       });
     });
 
@@ -117,7 +122,8 @@ describe('issuesReducer', () => {
           1: {number: 1, updated: true},
           2: {number: 2},
         },
-        isLoading: false
+        isLoading: false,
+        error: null
       });
     });
 
@@ -133,7 +139,8 @@ describe('issuesReducer', () => {
 describe('repoReducer', () => {
   it('has initial state', () => {
     expect(repoReducer(undefined, {})).toEqual({
-      openIssuesCount: -1
+      openIssuesCount: -1,
+      error: null
     });
   });
 
@@ -146,7 +153,8 @@ describe('repoReducer', () => {
     const state = { openIssuesCount: 10 };
     const payload = { open_issues_count: 42 };
     expect(repoReducer(state, {type: GET_REPO_DETAILS_SUCCESS, payload})).toEqual({
-      openIssuesCount: 42
+      openIssuesCount: 42,
+      error: null
     });
   });
 

@@ -12,11 +12,13 @@ const initialIssuesState = {
   currentPageIssues: [],
   pageCount: 0,
   pageLinks: {},
-  isLoading: false
+  isLoading: false,
+  error: null
 };
 
 const initialRepoState = {
-  openIssuesCount: -1
+  openIssuesCount: -1,
+  error: null
 };
 
 export function issuesReducer(state = initialIssuesState, action) {
@@ -34,7 +36,8 @@ export function issuesReducer(state = initialIssuesState, action) {
           ...state.issuesByNumber,
           [action.payload.number]: action.payload
         },
-        isLoading: false
+        isLoading: false,
+        error: null
       };
     case GET_ISSUES_SUCCESS:
       return {
@@ -46,7 +49,8 @@ export function issuesReducer(state = initialIssuesState, action) {
           return result;
         }, {}),
         currentPageIssues: action.payload.issues.map(issue => issue.number),
-        isLoading: false
+        isLoading: false,
+        error: null
       };
     case GET_ISSUE_FAILURE:
     case GET_ISSUES_FAILURE:
@@ -67,7 +71,8 @@ export function repoReducer(state = initialRepoState, action) {
     case GET_REPO_DETAILS_SUCCESS:
       return {
         ...state,
-        openIssuesCount: action.payload.open_issues_count
+        openIssuesCount: action.payload.open_issues_count,
+        error: null
       };
     case GET_REPO_DETAILS_FAILURE:
       return {
