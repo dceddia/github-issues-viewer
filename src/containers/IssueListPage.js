@@ -36,7 +36,7 @@ export class IssueListPage extends Component {
     const newPage = selected + 1;
 
     getIssues(org, repo, newPage);
-    this.context.router.replace({
+    this.context.router.push({
       query: { page: newPage }
     });
   }
