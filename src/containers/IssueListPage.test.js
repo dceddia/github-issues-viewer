@@ -16,6 +16,14 @@ page1.data = page1.data.map(issue => ({
   body: 'something without newlines'
 }));
 
+const location = {
+  query: {}
+};
+
+const context = {
+  router: {}
+};
+
 it('renders while loading', () => {
   const tree = shallow(
     <IssueListPage
@@ -23,8 +31,11 @@ it('renders while loading', () => {
       repo="rails"
       issues={[]}
       isLoading={true}
+      pageCount={10}
       openIssuesCount={-1}
-      getIssues={jest.fn()}/>
+      getIssues={jest.fn()}
+      location={location}/>,
+      { context }
   );
   checkSnapshot(tree);
 });
@@ -36,8 +47,11 @@ it('renders with issues', () => {
       repo="rails"
       issues={page1.data}
       isLoading={false}
+      pageCount={10}
       openIssuesCount={42}
-      getIssues={jest.fn()}/>
+      getIssues={jest.fn()}
+      location={location}/>,
+      { context }
   );
   checkSnapshot(tree);
 });
@@ -53,8 +67,11 @@ it('calls getIssues and getRepoDetails', () => {
       issues={[]}
       isLoading={true}
       openIssuesCount={-1}
+      pageCount={1}
+      location={location}
       getIssues={mockGetIssues}
-      getRepoDetails={mockGetRepoDetails}/>
+      getRepoDetails={mockGetRepoDetails}/>,
+      { context }
   );
 
   expect(mockGetIssues).toBeCalled();
