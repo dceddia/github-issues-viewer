@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { getIssue, getComments } from '../redux/actions';
 import { connect } from 'react-redux';
+import ReactMarkdown from 'react-markdown';
+import { insertMentionLinks } from '../utils/stringUtils';
 import UserWithAvatar from '../components/UserWithAvatar';
 import IssueLabels from '../components/IssueLabels';
-import ReactMarkdown from 'react-markdown';
+
 import './IssueDetailPage.css';
 
 const IssueState = ({ issue: {state} }) => (
@@ -17,10 +19,6 @@ const IssueNumber = ({ issue }) => (
     #{issue.number}
   </span>
 );
-
-export function insertMentionLinks(markdown) {
-  return markdown.replace(/\B(@([a-zA-Z0-9](-?[a-zA-Z0-9_])+))/g, `**[$1](https://github.com/$2)**`);
-}
 
 function IssueComments({ comments = [] }) {
   return (

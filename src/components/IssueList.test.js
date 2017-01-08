@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { checkSnapshot } from '../testUtils';
+import { checkSnapshot } from '../utils/testUtils';
 import IssueList from './IssueList';
 
 let issues = [

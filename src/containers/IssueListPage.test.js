@@ -2,9 +2,8 @@ jest.mock('../api');
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { checkSnapshot } from '../testUtils';
+import { checkSnapshot, afterPromises } from '../utils/testUtils';
 import * as API from '../api';
-import { afterPromises } from '../testUtils';
 import { IssueListPage } from './IssueListPage';
 import page1 from '../fixtures/issues/page1.json';
 

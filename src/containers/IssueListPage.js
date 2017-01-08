@@ -5,6 +5,33 @@ import { getIssues, getRepoDetails } from '../redux/actions';
 import Paginate from 'react-paginate';
 import './IssueListPage.css';
 
+function Header({ openIssuesCount, org, repo }) {
+  if(openIssuesCount === -1) {
+    return (
+      <h1>
+        Open issues for <OrgRepo org={org} repo={repo}/>
+      </h1>
+    );
+  } else {
+    const pluralizedIssue = openIssuesCount === 1 ? 'issue' : 'issues';
+    return (
+      <h1>
+        <span className="header__openIssues">{openIssuesCount}</span> open {pluralizedIssue} for <OrgRepo org={org} repo={repo}/>
+      </h1>
+    );
+  }
+}
+
+function OrgRepo({ org, repo }) {
+  return (
+    <span>
+      <span className="header__org">{org}</span>
+      {' / '}
+      <span className="header__repo">{repo}</span>
+    </span>
+  )
+}
+
 export class IssueListPage extends Component {
   constructor(props) {
     super(props);
@@ -51,12 +78,7 @@ export class IssueListPage extends Component {
 
     return (
       <div id="issue-list-page">
-        <h1>
-          Open issues for <span>{org}</span> / <span>{repo}</span>
-        </h1>
-        <p>
-          {openIssuesCount === -1 ? '--' : openIssuesCount} open issues
-        </p>
+        <Header openIssuesCount={openIssuesCount} org={org} repo={repo}/>
         {isLoading
           ? <span>Loading...</span>
           : <IssueList issues={issues}/>

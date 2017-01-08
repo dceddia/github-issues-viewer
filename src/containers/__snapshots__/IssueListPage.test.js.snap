@@ -1,20 +1,10 @@
 exports[`test renders while loading 1`] = `
 <div
   id="issue-list-page">
-  <h1>
-    Open issues for 
-    <span>
-      rails
-    </span>
-     / 
-    <span>
-      rails
-    </span>
-  </h1>
-  <p>
-    --
-     open issues
-  </p>
+  <Header
+    openIssuesCount={-1}
+    org="rails"
+    repo="rails" />
   <span>
     Loading...
   </span>
@@ -40,20 +30,10 @@ exports[`test renders while loading 1`] = `
 exports[`test renders with issues 1`] = `
 <div
   id="issue-list-page">
-  <h1>
-    Open issues for 
-    <span>
-      rails
-    </span>
-     / 
-    <span>
-      rails
-    </span>
-  </h1>
-  <p>
-    42
-     open issues
-  </p>
+  <Header
+    openIssuesCount={42}
+    org="rails"
+    repo="rails" />
   <IssueList
     issues={
       Array [
