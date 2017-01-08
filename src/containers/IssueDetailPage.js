@@ -19,7 +19,7 @@ const IssueNumber = ({ issue }) => (
 );
 
 export function insertMentionLinks(markdown) {
-  return markdown.replace(/\B(@([a-zA-Z0-9](-?[a-zA-Z0-9_])+))/g, `[$1](https://github.com/$2)`);
+  return markdown.replace(/\B(@([a-zA-Z0-9](-?[a-zA-Z0-9_])+))/g, `**[$1](https://github.com/$2)**`);
 }
 
 function IssueComments({ comments = [] }) {
@@ -37,7 +37,14 @@ function IssueComments({ comments = [] }) {
 function Comment({ comment }) {
   return (
     <div className="issue-detail__comment">
-      <ReactMarkdown className="markdown" source={comment.body}/>
+      <a href={`https://github.com/${comment.user.login}`}>
+        <img className="issue-detail__comment__avatar" src={comment.user.avatar_url} alt=""/>
+      </a>
+      <div>
+        <a href={`https://github.com/${comment.user.login}`}
+          className="issue-detail__comment__username">{comment.user.login}</a>
+        <ReactMarkdown className="markdown" source={insertMentionLinks(comment.body)}/>
+      </div>
     </div>
   );
 }
@@ -70,7 +77,7 @@ class IssueDetailPage extends Component {
         <IssueLabels labels={issue.labels}/>
         <hr className="divider--short"/>
         <div className="issue-detail__summary">
-          <ReactMarkdown source={insertMentionLinks(issue.body)}/>
+          <ReactMarkdown className="markdown" source={insertMentionLinks(issue.body)}/>
         </div>
         <hr className="divider--short"/>
         {issue.comments === 0
