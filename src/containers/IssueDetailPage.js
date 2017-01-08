@@ -54,6 +54,9 @@ class IssueDetailPage extends Component {
     // Fetch the issue if we weren't given one
     if(!this.props.issue) {
       this.props.getIssue();
+    } else {
+      // If we have the issue already, get its comments
+      this.props.getComments(this.props.issue);
     }
   }
 

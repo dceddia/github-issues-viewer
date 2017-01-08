@@ -16,22 +16,39 @@ export class IssueListPage extends Component {
     };
   }
 
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+
   componentDidMount() {
     const {getIssues, getRepoDetails, org, repo} = this.props;
     
+    const currentPage = Math.max(1,
+      (parseInt(this.props.location.query.page, 10) || 1)
+    );
+    
     getRepoDetails(org, repo);
-    getIssues(org, repo, 1);
+    getIssues(org, repo, currentPage);
   }
 
   handlePageChange = ({ selected }) => {
     const {getIssues, org, repo} = this.props;
+    const newPage = selected + 1;
 
-    getIssues(org, repo, selected + 1);
+    getIssues(org, repo, newPage);
+    this.context.router.replace({
+      query: { page: newPage }
+    });
   }
 
   render() {
     const {org, repo, isLoading, issues, pageCount, openIssuesCount} = this.props;
-    
+    const currentPage = Math.min(
+        pageCount,
+        Math.max(1,
+          (parseInt(this.props.location.query.page, 10) || 1)
+    )) - 1;
+
     return (
       <div id="issue-list-page">
         <h1>
@@ -46,6 +63,7 @@ export class IssueListPage extends Component {
         }
         <div className="issues__pagination">
           <Paginate
+            forcePage={currentPage}
             pageCount={pageCount}
             marginPagesDisplayed={2}
             pageRangeDisplayed={5}
@@ -61,7 +79,8 @@ IssueListPage.propTypes = {
   repo: PropTypes.string.isRequired,
   issues: PropTypes.array.isRequired,
   openIssuesCount: PropTypes.number.isRequired,
-  isLoading: PropTypes.bool.isRequired
+  isLoading: PropTypes.bool.isRequired,
+  pageCount: PropTypes.number.isRequired
 };
 
 IssueListPage.defaultProps = {
@@ -76,6 +95,7 @@ const mapStateToProps = ({ issues, repo }) => ({
   issues: selectIssues(issues),
   openIssuesCount: repo.openIssuesCount,
   isLoading: issues.isLoading,
+  pageCount: issues.pageCount
 });
 
 const mapDispatch = { getIssues, getRepoDetails };
