@@ -18,8 +18,8 @@ const IssueNumber = ({ issue }) => (
   </span>
 );
 
-function insertMentionLinks(markdown) {
-  return markdown.replace(/\B(@(\w+))/g, `[$1](https://github.com/$2)`);
+export function insertMentionLinks(markdown) {
+  return markdown.replace(/\B(@([a-zA-Z0-9](-?[a-zA-Z0-9_])+))/g, `[$1](https://github.com/$2)`);
 }
 
 class IssueDetailPage extends Component {
