@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { getIssue } from '../redux/actions';
+import { getIssue, getComments } from '../redux/actions';
 import { connect } from 'react-redux';
 import UserWithAvatar from '../components/UserWithAvatar';
 import IssueLabels from '../components/IssueLabels';
@@ -22,6 +22,26 @@ export function insertMentionLinks(markdown) {
   return markdown.replace(/\B(@([a-zA-Z0-9](-?[a-zA-Z0-9_])+))/g, `[$1](https://github.com/$2)`);
 }
 
+function IssueComments({ comments = [] }) {
+  return (
+    <ul className="issue-detail__comments">
+      {comments.map(comment =>
+        <li key={comment.id}>
+          <Comment comment={comment}/>
+        </li>
+      )}
+    </ul>
+  );
+}
+
+function Comment({ comment }) {
+  return (
+    <div className="issue-detail__comment">
+      <ReactMarkdown className="markdown" source={comment.body}/>
+    </div>
+  );
+}
+
 class IssueDetailPage extends Component {
   componentDidMount() {
     // Fetch the issue if we weren't given one
@@ -30,8 +50,14 @@ class IssueDetailPage extends Component {
     }
   }
 
+  componentWillReceiveProps(newProps) {
+    if(newProps.issue !== this.props.issue) {
+      this.props.getComments(newProps.issue);
+    }
+  }
+
   renderContent() {
-    const {issue} = this.props;
+    const {issue, comments} = this.props;
 
     return (
       <div className="issue-detail">
@@ -47,6 +73,9 @@ class IssueDetailPage extends Component {
           <ReactMarkdown source={insertMentionLinks(issue.body)}/>
         </div>
         <hr className="divider--short"/>
+        {issue.comments === 0
+          ? <div>No comments</div>
+          : <IssueComments comments={comments}/>}
       </div>
     );
   }
@@ -74,17 +103,24 @@ class IssueDetailPage extends Component {
 IssueDetailPage.propTypes = {
   params: PropTypes.shape({
     issueId: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  issue: PropTypes.object,
+  comments: PropTypes.array
 };
 
-const mapState = ({ issues }, ownProps) => {
+const mapState = ({ issues, commentsByIssue }, ownProps) => {
+  const issueNum = ownProps.params.issueId;
   return {
-    issue: issues.issuesByNumber[ownProps.params.issueId]
+    issue: issues.issuesByNumber[issueNum],
+    comments: commentsByIssue[issueNum]
   };
 };
 
 const mapDispatch = (dispatch, ownProps) => ({
-  getIssue: () => dispatch(getIssue('rails', 'rails', ownProps.params.issueId))
+  getIssue: () => dispatch(getIssue('rails', 'rails', ownProps.params.issueId)),
+  getComments: (issue) => {
+    return dispatch(getComments(issue));
+  }
 });
 
 export default connect(mapState, mapDispatch)(IssueDetailPage);

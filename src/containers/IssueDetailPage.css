@@ -18,19 +18,19 @@
 
 .issue-detail__summary {
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 1rem;
   line-height: 1.4rem;
 }
 
-.issue-detail__summary pre {
+.markdown pre {
   border: 1px solid #ccc;
   padding: 0.5rem;
   border-radius: 2px;
   background-color: #f9f9f9;
   overflow-x: auto;
 }
-.issue-detail__summary p > code {
+.markdown p > code {
   padding: 3px 5px;
   border-radius: 2px;
   background-color: #f7f7f7;
@@ -52,4 +52,13 @@
 
 .issue-detail .issue__labels {
   margin-bottom: 2rem;
+}
+
+.issue-detail__comments {
+  padding: 0 1rem;
+}
+
+.issue-detail__comment {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
 }

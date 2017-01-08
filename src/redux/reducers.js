@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import {
   GET_ISSUE_BEGIN, GET_ISSUE_SUCCESS, GET_ISSUE_FAILURE,
   GET_ISSUES_BEGIN, GET_ISSUES_SUCCESS, GET_ISSUES_FAILURE,
+  GET_COMMENTS_BEGIN, GET_COMMENTS_SUCCESS, GET_COMMENTS_FAILURE,
   GET_REPO_DETAILS_BEGIN, GET_REPO_DETAILS_SUCCESS, GET_REPO_DETAILS_FAILURE,
 } from './actions';
 
@@ -79,7 +80,27 @@ export function repoReducer(state = initialRepoState, action) {
   }
 }
 
+export function commentsReducer(state = {}, action) {
+  switch(action.type) {
+    case GET_COMMENTS_BEGIN:
+      return state;
+    case GET_COMMENTS_SUCCESS:
+      return {
+        ...state,
+        [action.payload.issueNumber]: action.payload.comments
+      };
+    case GET_COMMENTS_FAILURE:
+      return {
+        ...state,
+        error: action.error
+      };
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   issues: issuesReducer,
+  commentsByIssue: commentsReducer,
   repo: repoReducer
 });

@@ -1,7 +1,8 @@
-import { issuesReducer, repoReducer } from './reducers';
+import { issuesReducer, repoReducer, commentsReducer } from './reducers';
 import {
   GET_ISSUE_BEGIN, GET_ISSUE_SUCCESS, GET_ISSUE_FAILURE,
   GET_ISSUES_BEGIN, GET_ISSUES_SUCCESS, GET_ISSUES_FAILURE,
+  GET_COMMENTS_BEGIN, GET_COMMENTS_SUCCESS, GET_COMMENTS_FAILURE,
   GET_REPO_DETAILS_BEGIN, GET_REPO_DETAILS_SUCCESS, GET_REPO_DETAILS_FAILURE,
 } from './actions';
 
@@ -18,21 +19,13 @@ describe('issuesReducer', () => {
     });
 
     it('handles BEGIN', () => {
-      expect(issuesReducer(undefined, {type: GET_ISSUES_BEGIN })).toEqual({
-        issuesByNumber: {},
-        currentPageIssues: [],
-        pageCount: 0,
-        pageLinks: {},
+      expect(issuesReducer({}, {type: GET_ISSUES_BEGIN })).toEqual({
         isLoading: true
       });
     });
 
     it('handles FAILURE', () => {
-      expect(issuesReducer(undefined, {type: GET_ISSUES_FAILURE, error: 'foo'})).toEqual({
-        issuesByNumber: {},
-        currentPageIssues: [],
-        pageCount: 0,
-        pageLinks: {},
+      expect(issuesReducer({}, {type: GET_ISSUES_FAILURE, error: 'foo'})).toEqual({
         isLoading: false,
         error: 'foo'
       });
@@ -49,7 +42,7 @@ describe('issuesReducer', () => {
         }]
       };
 
-      expect(issuesReducer(undefined, {type: GET_ISSUES_SUCCESS, payload })).toEqual({
+      expect(issuesReducer({}, {type: GET_ISSUES_SUCCESS, payload })).toEqual({
         issuesByNumber: {
           1: {number: 1},
           2: {number: 2},
@@ -68,7 +61,7 @@ describe('issuesReducer', () => {
         issues: []
       };
 
-      expect(issuesReducer(undefined, {type: GET_ISSUES_SUCCESS, payload})).toEqual({
+      expect(issuesReducer({}, {type: GET_ISSUES_SUCCESS, payload})).toEqual({
         issuesByNumber: {},
         currentPageIssues: [],
         pageCount: 42,
@@ -80,24 +73,17 @@ describe('issuesReducer', () => {
 
   describe('getting a single issue', () => {
     it('handles BEGIN', () => {
-      expect(issuesReducer(undefined, {type: GET_ISSUE_BEGIN})).toEqual({
-        issuesByNumber: {},
-        currentPageIssues: [],
-        pageCount: 0,
-        pageLinks: {},
+      expect(issuesReducer({}, {type: GET_ISSUE_BEGIN})).toEqual({
         isLoading: true
       });
     });
 
     it('handles SUCCESS when no issues are present', () => {
       const payload = { number: 1 };
-      expect(issuesReducer(undefined, {type: GET_ISSUE_SUCCESS, payload})).toEqual({
+      expect(issuesReducer({}, {type: GET_ISSUE_SUCCESS, payload})).toEqual({
         issuesByNumber: {
           1: {number: 1}
         },
-        currentPageIssues: [],
-        pageCount: 0,
-        pageLinks: {},
         isLoading: false
       });
     });
@@ -169,6 +155,65 @@ describe('repoReducer', () => {
     const error = new Error('something bad');
     expect(repoReducer(state, {type: GET_REPO_DETAILS_FAILURE, error})).toEqual({
       openIssuesCount: -1,
+      error
+    });
+  });
+});
+
+describe('commentsReducer', () => {
+  it('has initial state', () => {
+    expect(commentsReducer(undefined, {})).toEqual({});
+  });
+
+  it('handles BEGIN', () => {
+    expect(commentsReducer({}, {type: GET_COMMENTS_BEGIN})).toEqual({});
+  });
+
+  it('handles SUCCESS when no comments exist', () => {
+    const state = {};
+    const payload = {
+      comments: [1, 2, 3],
+      issueNumber: 1
+    };
+    expect(commentsReducer(state, {type: GET_COMMENTS_SUCCESS, payload})).toEqual({
+      1: [1, 2, 3]
+    });
+  });
+
+  it('merges in comments for new issues', () => {
+    const state = {
+      1: [1, 2]
+    };
+    const payload = {
+      comments: [3, 4],
+      issueNumber: 2
+    };
+    expect(commentsReducer(state, {type: GET_COMMENTS_SUCCESS, payload})).toEqual({
+      1: [1, 2],
+      2: [3, 4]
+    });
+  });
+
+  it('replaces existing comments', () => {
+    const state = {
+      1: [1, 2]
+    };
+    const payload = {
+      comments: [3, 4],
+      issueNumber: 1
+    };
+    expect(commentsReducer(state, {type: GET_COMMENTS_SUCCESS, payload})).toEqual({
+      1: [3, 4]
+    });
+  });
+
+  it('handles FAILURE', () => {
+    const state = {
+      1: [1, 2]
+    };
+    const error = new Error('something bad');
+    expect(commentsReducer(state, {type: GET_COMMENTS_FAILURE, error})).toEqual({
+      1: [1, 2],
       error
     });
   });
