@@ -65,6 +65,7 @@ export class IssueListPage extends Component {
 
     getIssues(org, repo, newPage);
     this.context.router.push({
+      pathname: this.props.location.pathname,
       query: { page: newPage }
     });
   }
@@ -120,20 +121,17 @@ IssueListPage.propTypes = {
   pageCount: PropTypes.number.isRequired
 };
 
-IssueListPage.defaultProps = {
-  org: "rails",
-  repo: "rails"
-};
-
 const selectIssues = issues => 
   issues.currentPageIssues.map(number => issues.issuesByNumber[number]);
 
-const mapStateToProps = ({ issues, repo }) => ({
+const mapStateToProps = ({ issues, repo }, ownProps) => ({
   issues: selectIssues(issues),
   issuesError: issues.error,
   openIssuesCount: repo.openIssuesCount,
   isLoading: issues.isLoading,
-  pageCount: issues.pageCount
+  pageCount: issues.pageCount,
+  org: ownProps.params.org,
+  repo: ownProps.params.repo
 });
 
 const mapDispatch = { getIssues, getRepoDetails };

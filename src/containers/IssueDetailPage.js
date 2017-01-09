@@ -136,11 +136,14 @@ const mapState = ({ issues, commentsByIssue }, ownProps) => {
   };
 };
 
-const mapDispatch = (dispatch, ownProps) => ({
-  getIssue: () => dispatch(getIssue('rails', 'rails', ownProps.params.issueId)),
-  getComments: (issue) => {
-    return dispatch(getComments(issue));
-  }
-});
+const mapDispatch = (dispatch, ownProps) => {
+  const {org, repo, issueId} = ownProps.params;
+  return {
+    getIssue: () => dispatch(getIssue(org, repo, issueId)),
+    getComments: (issue) => {
+      return dispatch(getComments(issue));
+    }
+  };
+};
 
 export default connect(mapState, mapDispatch)(IssueDetailPage);

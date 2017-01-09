@@ -5,12 +5,13 @@ import IssueLabels from './IssueLabels';
 import { shorten } from '../utils/stringUtils';
 import './Issue.css';
 
-export default function Issue({ number, title, labels, user, summary }) {
+export default function Issue({ number, title, labels, user, summary }, { router }) {
+  const {org, repo} = router.params;
   return (
     <div className="issue">
       <UserWithAvatar user={user}/>
       <div>
-        <Link to={`/issue/${number}`}>
+        <Link to={`/${org}/${repo}/issues/${number}`}>
           <span className="issue__number">#{number}</span>
           <span className="issue__title">{title}</span>
         </Link>
@@ -34,4 +35,8 @@ Issue.propTypes = {
     avatar_url: PropTypes.string
   }).isRequired,
   summary: PropTypes.string.isRequired
+};
+
+Issue.contextTypes = {
+  router: PropTypes.object.isRequired
 };

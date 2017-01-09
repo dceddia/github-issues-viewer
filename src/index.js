@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute, browserHistory, applyRouterMiddleware } from 'react-router';
+import { Router, Route, IndexRoute, IndexRedirect, browserHistory, applyRouterMiddleware } from 'react-router';
 import useScroll from 'react-router-scroll/lib/useScroll';
 import rootReducer from './redux/reducers';
 import App from './containers/App';
@@ -16,8 +16,11 @@ let store = createStore(rootReducer, applyMiddleware(thunk));
 const routes = (
   <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
     <Route path="/" component={App}>
-      <IndexRoute component={IssueListPage}/>
-      <Route path="/issue/:issueId" component={IssueDetailPage}/>
+      <IndexRedirect to="/rails/rails/issues"/>
+      <Route path="/:org/:repo/issues">
+        <IndexRoute component={IssueListPage}/>
+        <Route path=":issueId" component={IssueDetailPage}/>
+      </Route>
     </Route>
   </Router>
 );

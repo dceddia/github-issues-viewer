@@ -12,7 +12,7 @@ exports[`test renders 1`] = `
     <Link
       onlyActiveOnIndex={false}
       style={Object {}}
-      to="/issue/27593">
+      to="/rails/rails/issues/27593">
       <span
         className="issue__number">
         #
