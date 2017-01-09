@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ```
 yarn    # or 'npm install'
-npm start
+yarn start
 ```
 
 It will open up a browser to [http://localhost:3000](http://localhost:3000).
@@ -14,7 +14,7 @@ It will open up a browser to [http://localhost:3000](http://localhost:3000).
 ## Run The Tests
 
 ```
-CI=true npm test
+CI=true yarn test
 ```
 
 The `CI=true` is not required, but it will enter watch mode unless that flag is present.
