@@ -10,7 +10,7 @@ export default function Issue({ number, title, labels, user, summary }, { router
   return (
     <div className="issue">
       <UserWithAvatar user={user}/>
-      <div>
+      <div className="issue__body">
         <Link to={`/${org}/${repo}/issues/${number}`}>
           <span className="issue__number">#{number}</span>
           <span className="issue__title">{title}</span>

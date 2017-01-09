@@ -7,7 +7,7 @@
   text-align: center;
   margin-right: 0.5rem;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   min-width: 80px;
   max-width: 80px;
 }

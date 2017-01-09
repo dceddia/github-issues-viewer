@@ -8,7 +8,8 @@ exports[`test renders 1`] = `
         "login": "somebody",
       }
     } />
-  <div>
+  <div
+    className="issue__body">
     <Link
       onlyActiveOnIndex={false}
       style={Object {}}
