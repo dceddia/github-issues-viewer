@@ -5,9 +5,7 @@ exports[`test renders while loading 1`] = `
     openIssuesCount={-1}
     org="rails"
     repo="rails" />
-  <span>
-    Loading...
-  </span>
+  <FakeIssueList />
   <div
     className="issues__pagination">
     <PaginationBoxView

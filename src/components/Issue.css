@@ -35,3 +35,24 @@
 .issue__labels {
   padding-left: 0.5rem;
 }
+
+.issue--loading .issue__body {
+  width: 100%;
+}
+.issue--loading .issue__number,
+.issue--loading .issue__title {
+  background-color: #e5e5e5;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.issue--loading .issue__number {
+  width: 20%;
+  max-width: 4rem;
+}
+.issue--loading .issue__title {
+  width: 70%;
+}
+.issue--loading .issue__summary {
+  background-color: #e5e5e5;
+  width: 95%;
+}

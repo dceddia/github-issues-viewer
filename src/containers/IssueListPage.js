@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import IssueList from '../components/IssueList';
 import { getIssues, getRepoDetails } from '../redux/actions';
 import Paginate from 'react-paginate';
+import FakeIssueList from '../components/FakeIssueList';
 import './IssueListPage.css';
 
 function Header({ openIssuesCount, org, repo }) {
@@ -92,7 +93,7 @@ export class IssueListPage extends Component {
       <div id="issue-list-page">
         <Header openIssuesCount={openIssuesCount} org={org} repo={repo}/>
         {isLoading
-          ? <span>Loading...</span>
+          ? <FakeIssueList/>
           : <IssueList issues={issues}/>
         }
         <div className="issues__pagination">

@@ -7,7 +7,7 @@ import page3 from '../fixtures/issues/page3';
 import page49 from '../fixtures/issues/page49';
 import comments from '../fixtures/comments';
 
-const USE_STATIC_DATA = true;
+const USE_STATIC_DATA = false;
 
 if(USE_STATIC_DATA) {
   let mock = new MockAxios(axios);
