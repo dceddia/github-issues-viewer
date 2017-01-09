@@ -1,7 +1,7 @@
 import React from 'react';
 import UserWithAvatar from './UserWithAvatar';
 import IssueLabels from './IssueLabels';
-import noAvatar from '../no-avatar.png';
+import noAvatar from '../images/no-avatar.png';
 import './Issue.css';
 
 export default function FakeIssue() {
