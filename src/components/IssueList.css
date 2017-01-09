@@ -1,0 +1,7 @@
+.issues {
+  padding: 0;
+  margin: 0;
+}
+.issues > li {
+  list-style: none;
+}

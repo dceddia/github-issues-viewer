@@ -72,6 +72,9 @@
 .issue-detail__comments {
   padding: 0 1rem;
 }
+.issue-detail__comments > li {
+  list-style: none;
+}
 
 .issue-detail__comment {
   margin-bottom: 1rem;
@@ -80,6 +83,7 @@
 
 .issue-detail__comment__body {
   padding-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .issue-detail__comment__avatar {
