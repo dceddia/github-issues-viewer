@@ -974,7 +974,7 @@ exports[`test renders an issue with a comment-loading error 1`] = `
       className="divider--short" />
     <div
       className="issue-detail--comments-error">
-      There was a problem fetch the comments.
+      There was a problem fetching the comments.
     </div>
   </div>
 </div>

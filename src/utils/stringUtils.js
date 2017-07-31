@@ -12,7 +12,7 @@ export function shorten(text = "", maxLength = 140) {
   }
 
   const ellip = " ...";
-  
+
   // Return the 140 chars as-is if they end in a non-word char
   const oneTooLarge = cleanText.substr(0, 141);
   if(/\W$/.test(oneTooLarge)) {

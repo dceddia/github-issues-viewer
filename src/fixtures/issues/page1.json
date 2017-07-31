@@ -1,4 +1,4 @@
-{ 
+{
 "link": "<https://api.github.com/repositories/8514/issues?per_page=25&page=2>; rel=\"next\", <https://api.github.com/repositories/8514/issues?per_page=25&page=49>; rel=\"last\"",
 "data": [
   {

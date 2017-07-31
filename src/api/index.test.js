@@ -92,7 +92,7 @@ describe('getIssues', () => {
     axios.get = url => {
       return Promise.reject(error);
     };
-    
+
     getIssues('fail', 'fail')
       .then(fail)
       .catch((e) => {

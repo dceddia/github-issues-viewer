@@ -44,7 +44,7 @@ export class IssueDetailPage extends Component {
     if(commentsError) {
       return (
         <div className="issue-detail--comments-error">
-          There was a problem fetch the comments.
+          There was a problem fetching the comments.
         </div>
       );
     }

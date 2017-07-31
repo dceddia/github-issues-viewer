@@ -7,7 +7,7 @@ export default function FakeIssueList({ number = 25 }) {
     <ul className="issues">
       {Array.from(Array(number)).map((issue, i) =>
         <li key={i} className="issues__issue-wrapper">
-            <FakeIssue/>
+          <FakeIssue/>
         </li>
       )}
     </ul>

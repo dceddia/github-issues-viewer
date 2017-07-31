@@ -61,7 +61,7 @@ export function getRepoDetails(org, repo) {
     API.getRepoDetails(org, repo)
       .then(details => dispatch(getRepoDetailsSuccess(details)))
       .catch(error => dispatch(getRepoDetailsFailure(error)));
-  } 
+  }
 }
 
 
